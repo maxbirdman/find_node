@@ -1,4 +1,4 @@
-# Update: 2026-06-30 08:57
+# Update: 2026-06-30 13:55
 allow-lan: false
 mixed-port: 7890
 external-controller: 0.0.0.0:9090
@@ -35,120 +35,60 @@ sniffer:
       - 443
       - 8443
 proxies:
-- name: '[18ms] 🇺🇸US-108.181.0.177-0085'
+- name: '[17ms] 🇺🇸US-37.19.198.244-0071'
   type: ss
-  server: 108.181.0.177
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: G5p6ww4o67HB
+  server: 37.19.198.244
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  delay: 17
+- name: '[18ms] 🇺🇸US-37.19.198.236-0063'
+  type: ss
+  server: 37.19.198.236
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
   delay: 18
-- name: '[22ms] 🇨🇦CA-108.181.118.10-0084'
+- name: '[18ms] 🇺🇸US-37.19.198.160-0066'
   type: ss
-  server: 108.181.118.10
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: G5p6ww4o67HB
-  delay: 22
-- name: '[31ms] 🇺🇸US-173.244.56.9-0087'
-  type: ss
-  server: 173.244.56.9
+  server: 37.19.198.160
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-  delay: 31
-- name: '[32ms] 🇺🇸US-173.244.56.6-0089'
+  delay: 18
+- name: '[19ms] 🇺🇸US-37.19.198.243-0077'
   type: ss
-  server: 173.244.56.6
+  server: 37.19.198.243
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-  delay: 32
-- name: '[35ms] 美國'
-  type: vmess
-  server: 82.198.246.37
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: aes-128-gcm
-  tls: false
-  skip-cert-verify: true
-  network: tcp
-  delay: 35
-- name: '[35ms] 美國節點 #3'
-  type: vmess
-  server: 82.198.246.97
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: tcp
-  delay: 35
-- name: '[35ms] 🇺🇸US-77.247.126.137-6157'
+  delay: 19
+- name: '[24ms] 🇺🇸US-194.33.45.157-6158'
   type: trojan
-  server: 77.247.126.137
+  server: 194.33.45.157
   port: 443
   password: 3ac6a6ca99f74941b1eaf892818e2ddb
-  sni: 77.247.126.137
+  sni: 194.33.45.157
   skip-cert-verify: true
   udp: true
-  delay: 35
-- name: '[36ms] 美國節點'
-  type: vmess
-  server: 82.198.246.250
-  port: 180
-  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: tcp
+  delay: 24
+- name: '[36ms] 🇸🇬SG_2|4.4MB/s'
+  type: vless
+  server: 172.64.153.159
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  tls: true
+  network: ws
+  udp: true
+  servername: t1s1.rittbo.kdns.fr
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: t1s1.rittbo.kdns.fr
   delay: 36
-- name: '[51ms] 🇩🇪DE_3|2.1MB/s'
+- name: '[37ms] 🇸🇬SG_3|3.8MB/s'
   type: vless
-  server: 104.26.13.40
-  port: 8880
-  uuid: b9ea760d-3200-4d6d-8000-30514ebbce5a
-  tls: false
-  network: ws
-  udp: true
-  ws-opts:
-    path: /pyip=ProxyIP.JP.CMLiussss.net
-    headers:
-      Host: aged-pine-d8c4.379.workers.dev
-  delay: 51
-- name: '[53ms] 🇯🇵JP_3|3.2MB/s'
-  type: vless
-  server: 172.64.52.134
-  port: 8443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 53
-- name: '[53ms] 🇺🇸US-156.146.38.170-0080'
-  type: ss
-  server: 156.146.38.170
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  delay: 53
-- name: '[53ms] 🇺🇸US-156.146.38.167-0068'
-  type: ss
-  server: 156.146.38.167
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  delay: 53
-- name: '[54ms] 🇸🇬SG_23|3.8MB/s'
-  type: vless
-  server: 172.64.145.186
+  server: 162.159.8.123
   port: 443
   uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
   tls: true
@@ -159,22 +99,10 @@ proxies:
     path: /fp=chrome
     headers:
       Host: t1s1.rittbo.kdns.fr
-  delay: 54
-- name: '[54ms] 🏁RELAY-104.16.72.101-0619'
-  type: trojan
-  server: 104.16.72.101
-  port: 443
-  password: 86957ec0-b213-433b-a43b-51f2175e0ec3
-  sni: space.byu.id.yxls.eu.cc
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /au-do
-  delay: 54
-- name: '[56ms] 🇸🇬SG_3|3.5MB/s'
+  delay: 37
+- name: '[38ms] 美国+CloudFlare节点'
   type: vless
-  server: 162.159.32.239
+  server: 172.64.144.82
   port: 443
   uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
   tls: true
@@ -182,250 +110,13 @@ proxies:
   udp: true
   servername: t1s1.rittbo.kdns.fr
   ws-opts:
-    path: /fp=chrome
+    path: /
     headers:
       Host: t1s1.rittbo.kdns.fr
-  delay: 56
-- name: '[56ms] 🇯🇵JP_2|2.7MB/s'
+  delay: 38
+- name: '[39ms] 🇯🇵JP_1|3.5MB/s'
   type: vless
-  server: 172.64.53.27
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 56
-- name: '[56ms] 🇸🇬SG_6|3.3MB/s'
-  type: vless
-  server: 162.159.4.221
-  port: 8443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 56
-- name: '[56ms] 🇺🇸US_6|2.5MB/s'
-  type: vless
-  server: 154.21.82.11
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 56
-- name: '[56ms] 🇺🇸US-156.146.38.169-0081'
-  type: ss
-  server: 156.146.38.169
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  delay: 56
-- name: '[56ms] 🇺🇸US-156.146.38.168-0083'
-  type: ss
-  server: 156.146.38.168
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  delay: 56
-- name: '[57ms] 🇸🇬SG_8|3.3MB/s'
-  type: vless
-  server: 162.159.46.24
-  port: 8443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 57
-- name: '[57ms] 🇸🇬SG_11|2.1MB/s'
-  type: vless
-  server: 162.159.24.39
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 57
-- name: '[57ms] 🇩🇪DE_1|3.4MB/s'
-  type: vless
-  server: 172.67.89.31
-  port: 2086
-  uuid: 98b6cb05-b5ab-4c82-8683-07de28f796a9
-  tls: false
-  network: ws
-  udp: true
-  ws-opts:
-    path: /eyJqdW5rIjoiRHF6VWU4SmYiLCJwcm90b2NvbCI6InZsIiwibW9kZSI6InByZWZpeCIsInBhbmVsSVBzIjpbIlsyNjAyOmZjNTk6YjA6NjQ6Ol0iXX0
-    headers:
-      Host: holy-glitter-39f9.wwewee2dasdds.workers.dev
-  delay: 57
-- name: '[58ms] 🇸🇬SG_22|2.5MB/s'
-  type: vless
-  server: 172.64.35.206
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 58
-- name: '[58ms] 🇸🇬SG_24|4.5MB/s'
-  type: vless
-  server: 162.159.46.226
-  port: 8443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 58
-- name: '[58ms] 🇸🇬SG_28|2.9MB/s'
-  type: vless
-  server: 172.64.41.202
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 58
-- name: '[58ms] 🇸🇬SG_30|3.7MB/s'
-  type: vless
-  server: 172.64.145.2
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 58
-- name: '[59ms] 🇸🇬SG_13|2.8MB/s'
-  type: vless
-  server: 162.159.60.167
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 59
-- name: '[59ms] 🇸🇬SG_19|3.6MB/s'
-  type: vless
-  server: 162.159.41.198
-  port: 8443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 59
-- name: '[60ms] 🇸🇬SG_17|3.4MB/s'
-  type: vless
-  server: 172.64.35.37
-  port: 8443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 60
-- name: '[60ms] 🇯🇵JP_6|2.4MB/s'
-  type: vless
-  server: 172.64.52.18
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 60
-- name: '[61ms] 🇸🇬SG_7|5.0MB/s'
-  type: vless
-  server: 104.18.44.198
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 61
-- name: '[61ms] 🇸🇬SG_20|3.4MB/s'
-  type: vless
-  server: 162.159.42.163
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 61
-- name: '[61ms] 🇯🇵JP_4|3.8MB/s'
-  type: vless
-  server: 162.159.45.201
+  server: 162.159.44.172
   port: 2083
   uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
   tls: true
@@ -436,10 +127,10 @@ proxies:
     path: /fp=chrome
     headers:
       Host: t1s1.rittbo.kdns.fr
-  delay: 61
-- name: '[62ms] 🇸🇬SG_21|3.8MB/s'
+  delay: 39
+- name: '[40ms] 🇸🇬SG_5|2.0MB/s'
   type: vless
-  server: 172.64.42.44
+  server: 162.159.46.67
   port: 443
   uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
   tls: true
@@ -450,24 +141,23 @@ proxies:
     path: /fp=chrome
     headers:
       Host: t1s1.rittbo.kdns.fr
-  delay: 62
-- name: '[62ms] 🇸🇬SG_27|2.2MB/s'
+  delay: 40
+- name: '[40ms] 🇺🇸US_9|1.6MB/s'
   type: vless
-  server: 104.18.45.249
-  port: 8443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
+  server: 172.64.88.168
+  port: 8880
+  uuid: 2e55e846-7737-4c07-af67-191e2727513c
+  tls: false
   network: ws
   udp: true
-  servername: t1s1.rittbo.kdns.fr
   ws-opts:
-    path: /fp=chrome
+    path: /pyip=ProxyIP.US.CMLiussss.net
     headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 62
-- name: '[62ms] 🇯🇵JP_7|1.7MB/s'
+      Host: weathered-sunset-be54.407-d9d.workers.dev
+  delay: 40
+- name: '[45ms] 🇸🇬SG_4|3.9MB/s'
   type: vless
-  server: 162.159.38.101
+  server: 172.64.146.229
   port: 443
   uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
   tls: true
@@ -478,8 +168,22 @@ proxies:
     path: /fp=chrome
     headers:
       Host: t1s1.rittbo.kdns.fr
-  delay: 62
-- name: '[62ms] 🏁RELAY-104.18.42.163-0623'
+  delay: 45
+- name: '[46ms] 🇸🇬SG_6|3.7MB/s'
+  type: vless
+  server: 162.159.10.87
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  tls: true
+  network: ws
+  udp: true
+  servername: t1s1.rittbo.kdns.fr
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+  delay: 46
+- name: '[50ms] 🏁RELAY-104.18.42.163-0623'
   type: trojan
   server: 104.18.42.163
   port: 443
@@ -490,214 +194,37 @@ proxies:
   network: ws
   ws-opts:
     path: /
+  delay: 50
+- name: '[54ms] 🇳🇱NL_3|2.9MB/s'
+  type: vless
+  server: 172.67.207.26
+  port: 8880
+  uuid: 26beb784-a664-4c3e-becf-0f0c12568b62
+  tls: false
+  network: ws
+  udp: true
+  ws-opts:
+    path: /pyip=ProxyIP.JP.CMLiussss.net
+    headers:
+      Host: twilight-poetry-2bfe.218-699.workers.dev
+  delay: 54
+- name: '[57ms] 🇺🇸US-23.227.193.173-6198'
+  type: trojan
+  server: 23.227.193.173
+  port: 443
+  password: AZWY=WAZk5TeVYmMUudr2xmeb00I3ymeMQ
+  sni: 23.227.193.173
+  skip-cert-verify: true
+  udp: true
+  delay: 57
+- name: '[62ms] 🇨🇦CA-137.184.174.93-0198'
+  type: ss
+  server: 137.184.174.93
+  port: 8080
+  cipher: rc4-md5
+  password: 14fFPrbezE3HDZzsMOr6
   delay: 62
-- name: '[63ms] 🇸🇬SG_5|2.7MB/s'
-  type: vless
-  server: 162.159.4.2
-  port: 8443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 63
-- name: '[64ms] 🇸🇬SG_10|1.8MB/s'
-  type: vless
-  server: 162.159.34.23
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 64
-- name: '[64ms] 🇸🇬SG_25|2.5MB/s'
-  type: vless
-  server: 162.159.21.235
-  port: 8443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 64
-- name: '[65ms] 🏁RELAY-141.193.213.30-0709'
-  type: trojan
-  server: 141.193.213.30
-  port: 443
-  password: f922fa0f-3311-4368-85ff-cf65e727c854
-  sni: space.byu.id.yxls.eu.cc
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /br-orcl
-  delay: 65
-- name: '[66ms] 🇯🇵JP_5|2.5MB/s'
-  type: vless
-  server: 162.159.44.180
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 66
-- name: '[67ms] 🇸🇬SG_18|1.6MB/s'
-  type: vless
-  server: 162.159.14.252
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 67
-- name: '[67ms] 🇸🇬SG_29|3.5MB/s'
-  type: vless
-  server: 162.159.32.29
-  port: 8443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 67
-- name: '[69ms] 🇸🇬SG_4|3.3MB/s'
-  type: vless
-  server: 162.159.42.182
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 69
-- name: '[69ms] 🇸🇬SG_12|3.4MB/s'
-  type: vless
-  server: 162.159.21.206
-  port: 2083
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 69
-- name: '[69ms] 🇸🇬SG_16|3.9MB/s'
-  type: vless
-  server: 172.64.151.158
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 69
-- name: '[70ms] 🇸🇬SG_14|2.6MB/s'
-  type: vless
-  server: 162.159.1.37
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 70
-- name: '[70ms] 🇸🇬SG_31|2.7MB/s'
-  type: vless
-  server: 162.159.3.48
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 70
-- name: '[70ms] 美国+CloudFlare节点 #3'
-  type: vless
-  server: 104.17.180.39
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 70
-- name: '[70ms] 🏁RELAY-104.16.72.70-0653'
-  type: trojan
-  server: 104.16.72.70
-  port: 443
-  password: 86957ec0-b213-433b-a43b-51f2175e0ec3
-  sni: space.byu.id.yxls.eu.cc
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /au-do
-  delay: 70
-- name: '[72ms] 🇸🇬SG_15|3.6MB/s'
-  type: vless
-  server: 162.159.3.141
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 72
-- name: '[72ms] 🏁RELAY-162.159.36.20-0621'
+- name: '[66ms] 美国+CloudFlare节点 #6'
   type: trojan
   server: 162.159.36.20
   port: 443
@@ -708,22 +235,61 @@ proxies:
   network: ws
   ws-opts:
     path: /
-  delay: 72
-- name: '[73ms] 🇯🇵JP_9|2.8MB/s'
+  delay: 66
+- name: '[71ms] 🇩🇪DE_3|2.3MB/s'
   type: vless
-  server: 162.159.45.15
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
+  server: 104.26.13.40
+  port: 8880
+  uuid: 612f78a0-65ca-45af-a3ff-7d0f8e9f8655
+  tls: false
   network: ws
   udp: true
-  servername: t1s1.rittbo.kdns.fr
   ws-opts:
-    path: /fp=chrome
+    path: /pyip=ProxyIP.KR.CMLiussss.net
     headers:
-      Host: t1s1.rittbo.kdns.fr
+      Host: broken-star-c5ae.446.workers.dev
+  delay: 71
+- name: '[72ms] 🇺🇸US-156.146.38.168-0083'
+  type: ss
+  server: 156.146.38.168
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  delay: 72
+- name: '[73ms] 🇺🇸US-156.146.38.167-0068'
+  type: ss
+  server: 156.146.38.167
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
   delay: 73
-- name: '[73ms] 🏁RELAY-188.164.248.122-0708'
+- name: '[74ms] 🇺🇸US-156.146.38.170-0080'
+  type: ss
+  server: 156.146.38.170
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  delay: 74
+- name: '[75ms] 🇺🇸US-156.146.38.169-0081'
+  type: ss
+  server: 156.146.38.169
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  delay: 75
+- name: '[88ms] 🏁RELAY-104.16.72.70-0653'
+  type: trojan
+  server: 104.16.72.70
+  port: 443
+  password: 86957ec0-b213-433b-a43b-51f2175e0ec3
+  sni: space.byu.id.yxls.eu.cc
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /au-do
+  delay: 88
+- name: '[89ms] 🏁RELAY-188.164.248.122-0708'
   type: trojan
   server: 188.164.248.122
   port: 443
@@ -734,70 +300,47 @@ proxies:
   network: ws
   ws-opts:
     path: /us-gllc
-  delay: 73
-- name: '[76ms] 🇺🇸US-154.64.235.157-0716'
+  delay: 89
+- name: '[90ms] 🇳🇱NL_7|2.0MB/s'
+  type: vless
+  server: www.ipget.net
+  port: 8880
+  uuid: 2b2ed3be-36bd-486d-9d04-ebf5b4be7ae9
+  tls: false
+  network: ws
+  udp: true
+  ws-opts:
+    path: /pyip=ProxyIP.SG.CMLiussss.net
+    headers:
+      Host: twilight-heart-dbd6.220-2bd.workers.dev
+  delay: 90
+- name: '[90ms] 🏁RELAY-104.16.72.101-0619'
   type: trojan
-  server: 154.64.235.157
+  server: 104.16.72.101
   port: 443
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  sni: hhcm.hhxaf.cc.cd
+  password: 86957ec0-b213-433b-a43b-51f2175e0ec3
+  sni: space.byu.id.yxls.eu.cc
   skip-cert-verify: true
   udp: true
   network: ws
   ws-opts:
-    path: /
-  delay: 76
-- name: '[77ms] 🇸🇬SG_26|3.5MB/s'
-  type: vless
-  server: 162.159.1.170
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 77
-- name: '[86ms] 🇸🇬SG_9|3.5MB/s'
-  type: vless
-  server: 172.64.150.246
-  port: 2083
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 86
-- name: '[95ms] 🇺🇸US_5|3.2MB/s'
-  type: trojan
-  server: 64.186.248.160
-  port: 443
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  sni: tjsp.hhxaf.cc.cd
+    path: /au-do
+  delay: 90
+- name: '[94ms] 🇨🇦 CA 3'
+  type: vmess
+  server: 23.162.200.198
+  port: 18000
+  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
+  alterId: 0
+  tls: false
   skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-  delay: 95
-- name: '[95ms] 🇨🇦CA-149.22.95.183-0091'
-  type: ss
-  server: 149.22.95.183
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  delay: 95
-- name: '[100ms] 🇯🇵JP_8|3.7MB/s'
+  network: tcp
+  cipher: auto
+  delay: 94
+- name: '[100ms] 🇸🇬SG_7|3.5MB/s'
   type: vless
-  server: 108.162.198.43
-  port: 8443
+  server: 162.159.16.154
+  port: 443
   uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
   tls: true
   network: ws
@@ -808,56 +351,20 @@ proxies:
     headers:
       Host: t1s1.rittbo.kdns.fr
   delay: 100
-- name: '[103ms] 🇸🇬SG_2|3.6MB/s'
+- name: '[101ms] 🇳🇱NL_5|2.0MB/s'
   type: vless
-  server: 162.159.8.42
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
+  server: skk.moe
+  port: 8880
+  uuid: d8a7b463-dc98-474d-a87e-8781476aef32
+  tls: false
   network: ws
   udp: true
-  servername: t1s1.rittbo.kdns.fr
   ws-opts:
-    path: /fp=chrome
+    path: /pyip=ProxyIP.KR.CMLiussss.net
     headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 103
-- name: '[104ms] 🇺🇸US-64.94.95.118-6199'
-  type: trojan
-  server: 64.94.95.118
-  port: 57142
-  password: kkzh2prsyr2ik47as615
-  sni: 64.94.95.118
-  skip-cert-verify: true
-  udp: true
-  delay: 104
-- name: '[109ms] 🇺🇸US-207.180.29.179-0626'
-  type: trojan
-  server: 207.180.29.179
-  port: 443
-  password: yp82ebxb01vlzo1b
-  sni: 207.180.29.179.cdn-one.org
-  skip-cert-verify: true
-  udp: true
-  network: grpc
-  grpc-opts:
-    grpc-service-name: /12699/gYDyLb9UzS
-  delay: 109
-- name: '[115ms] AE_speednode_0001'
-  type: trojan
-  server: 94.140.0.100
-  port: 443
-  password: MITIVPN
-  sni: 95r.ir
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /MiTiVPN=Usa
-    headers:
-      Host: 95r.ir
-  delay: 115
-- name: '[118ms] 🏁RELAY-104.18.42.163-0642'
+      Host: ancient-tree-7dc9.336-5f9.workers.dev
+  delay: 101
+- name: '[102ms] 🏁RELAY-104.18.42.163-0642'
   type: trojan
   server: www.shopify.com
   port: 443
@@ -868,8 +375,17 @@ proxies:
   network: ws
   ws-opts:
     path: /
-  delay: 118
-- name: '[119ms] 🏁RELAY-172.64.147.104-0711'
+  delay: 102
+- name: '[106ms] 🇺🇸US-64.94.95.118-6199'
+  type: trojan
+  server: 64.94.95.118
+  port: 57142
+  password: kkzh2prsyr2ik47as615
+  sni: 64.94.95.118
+  skip-cert-verify: true
+  udp: true
+  delay: 106
+- name: '[109ms] 🏁RELAY-172.64.147.104-0711'
   type: trojan
   server: store.ubi.com
   port: 443
@@ -880,29 +396,41 @@ proxies:
   network: ws
   ws-opts:
     path: /
-  delay: 119
-- name: '[133ms] 🇺🇸US-37.19.198.236-0063'
+  delay: 109
+- name: '[111ms] 🇺🇸US-108.181.0.177-0085'
   type: ss
-  server: 37.19.198.236
+  server: 108.181.0.177
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: G5p6ww4o67HB
+  delay: 111
+- name: '[113ms] 🇨🇦CA-108.181.118.10-0084'
+  type: ss
+  server: 108.181.118.10
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: G5p6ww4o67HB
+  delay: 113
+- name: '[116ms] 🇺🇸US-173.244.56.6-0089'
+  type: ss
+  server: 173.244.56.6
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-  delay: 133
-- name: '[134ms] 🇺🇸US-37.19.198.160-0066'
-  type: ss
-  server: 37.19.198.160
+  delay: 116
+- name: '[121ms] 🏁RELAY-141.193.213.30-0709'
+  type: trojan
+  server: 141.193.213.30
   port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  delay: 134
-- name: '[137ms] 🇺🇸US-37.19.198.243-0077'
-  type: ss
-  server: 37.19.198.243
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  delay: 137
-- name: '[138ms] NL_speednode_0016'
+  password: f922fa0f-3311-4368-85ff-cf65e727c854
+  sni: space.byu.id.yxls.eu.cc
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /br-orcl
+  delay: 121
+- name: '[123ms] NL_speednode_0016'
   type: trojan
   server: 45.131.4.118
   port: 443
@@ -915,24 +443,98 @@ proxies:
     path: /MiTiVPN=Se
     headers:
       Host: 95r.ir
-  delay: 138
-- name: '[139ms] 🇺🇸US-37.19.198.244-0071'
+  delay: 123
+- name: '[123ms] 🇺🇸US-173.244.56.9-0087'
   type: ss
-  server: 37.19.198.244
+  server: 173.244.56.9
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-  delay: 139
-- name: '[140ms] 🇺🇸US-23.227.193.173-6198'
+  delay: 123
+- name: '[130ms] 美國'
+  type: vmess
+  server: 82.198.246.37
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: aes-128-gcm
+  tls: false
+  skip-cert-verify: true
+  network: tcp
+  delay: 130
+- name: '[132ms] 🇺🇸US-207.180.29.179-0626'
   type: trojan
-  server: 23.227.193.173
+  server: 207.180.29.179
   port: 443
-  password: AZWY=WAZk5TeVYmMUudr2xmeb00I3ymeMQ
-  sni: 23.227.193.173
+  password: yp82ebxb01vlzo1b
+  sni: 207.180.29.179.cdn-one.org
   skip-cert-verify: true
   udp: true
-  delay: 140
-- name: '[144ms] GB_speednode_0005'
+  network: grpc
+  grpc-opts:
+    grpc-service-name: /12699/gYDyLb9UzS
+  delay: 132
+- name: '[133ms] 美國節點'
+  type: vmess
+  server: 82.198.246.250
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: tcp
+  delay: 133
+- name: '[139ms] 美國節點 #3'
+  type: vmess
+  server: 82.198.246.97
+  port: 180
+  uuid: d13fc2f5-3e05-4795-81eb-44143a09e552
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: tcp
+  delay: 139
+- name: '[142ms] AE_speednode_0001'
+  type: trojan
+  server: 94.140.0.100
+  port: 443
+  password: MITIVPN
+  sni: 95r.ir
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /MiTiVPN=Usa
+    headers:
+      Host: 95r.ir
+  delay: 142
+- name: '[143ms] 美国+CloudFlare节点 #8'
+  type: vless
+  server: cf3.466688.xyz
+  port: 443
+  uuid: b08562b0-dbc0-47d1-860d-9435133b25c9
+  tls: true
+  network: ws
+  udp: true
+  servername: cfoo-146.pages.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /QiangLieTuiJian?ed=2560
+    headers:
+      Host: cfoo-146.pages.dev
+  delay: 143
+- name: '[145ms] 🇨🇦CA-45.154.204.13-0141'
+  type: ssr
+  server: ssca.irundns.net
+  port: 443
+  cipher: aes-128-cfb
+  password: $$Turb0VPN$$
+  protocol: auth_aes128_md5
+  obfs: http_post
+  delay: 145
+- name: '[155ms] GB_speednode_0005'
   type: trojan
   server: 164.38.155.135
   port: 443
@@ -945,33 +547,552 @@ proxies:
     path: /MiTiVPN=De
     headers:
       Host: 95r.ir
-  delay: 144
-- name: '[159ms] 🇨🇦CA-137.184.174.93-0198'
+  delay: 155
+- name: '[156ms] 🇳🇱NL_2|1.6MB/s'
+  type: vless
+  server: ld.242311.xyz
+  port: 443
+  uuid: af563223-7402-4ecd-bbf9-10f7410753fa
+  tls: true
+  network: ws
+  udp: true
+  servername: ld.242311.xyz
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: ld.242311.xyz
+  delay: 156
+- name: '[162ms] 🇬🇧GB-146.70.61.37-0093'
   type: ss
-  server: 137.184.174.93
+  server: 146.70.61.37
   port: 8080
   cipher: rc4-md5
   password: 14fFPrbezE3HDZzsMOr6
-  delay: 159
-- name: '[163ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #4'
+  delay: 162
+- name: '[168ms] 🇳🇱NL-109.201.152.181-0127'
   type: ss
-  server: tinkered-pennies-puppies.freesocks.work
+  server: 109.201.152.181
   port: 443
-  cipher: chacha20-ietf-poly1305
-  password: hbGrpfvNrJsUmKmPbR3iY2
-  delay: 163
-- name: '[167ms] 🇨🇦 CA 3'
-  type: vmess
-  server: 23.162.200.198
-  port: 18000
-  uuid: f8c8dc3d-0d37-46b0-8b34-a7232882fcfe
-  alterId: 0
-  tls: false
+  cipher: aes-128-cfb
+  password: shadowsocks
+  delay: 168
+- name: '[168ms] 🇬🇧 GB 1'
+  type: ss
+  server: 158.173.24.73
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  delay: 168
+- name: '[174ms] 🇬🇧GB-94.156.250.148-0124'
+  type: ss
+  server: 94.156.250.148
+  port: 7001
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+  delay: 174
+- name: '[185ms] 🇨🇦CA-149.22.95.183-0091'
+  type: ss
+  server: 149.22.95.183
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  delay: 185
+- name: '[185ms] 🇬🇧GB-141.98.101.178-0120'
+  type: ss
+  server: 141.98.101.178
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  delay: 185
+- name: '[186ms] 🇬🇧GB-141.98.101.181-0109'
+  type: ss
+  server: 141.98.101.181
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  delay: 186
+- name: '[187ms] 🇬🇧GB-141.98.101.182-0128'
+  type: ss
+  server: 141.98.101.182
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  delay: 187
+- name: '[188ms] 🇺🇸US-77.247.126.137-6157'
+  type: trojan
+  server: 77.247.126.137
+  port: 443
+  password: 3ac6a6ca99f74941b1eaf892818e2ddb
+  sni: 77.247.126.137
   skip-cert-verify: true
+  udp: true
+  delay: 188
+- name: '[189ms] 🇬🇧GB-141.98.101.179-0129'
+  type: ss
+  server: 141.98.101.179
+  port: 443
+  cipher: aes-128-gcm
+  password: shadowsocks
+  delay: 189
+- name: '[190ms] 🇳🇱NL-193.29.139.235-0070'
+  type: ss
+  server: 193.29.139.235
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  delay: 190
+- name: '[194ms] 🇬🇧GB-82.38.31.2-0159'
+  type: ss
+  server: 82.38.31.2
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  delay: 194
+- name: '[195ms] 🇩🇪DE-8.209.74.72-0098'
+  type: ss
+  server: 8.209.74.72
+  port: 20001
+  cipher: chacha20-ietf-poly1305
+  password: PWpjPo3tqhPN4yRZ
+  delay: 195
+- name: '[196ms] 🇬🇧GB-82.38.31.218-0147'
+  type: ss
+  server: 82.38.31.218
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  delay: 196
+- name: '[196ms] 🇬🇧GB-82.38.31.202-0073'
+  type: ss
+  server: 82.38.31.202
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  delay: 196
+- name: '[197ms] 🇬🇧GB-82.38.31.191-0074'
+  type: ss
+  server: 82.38.31.191
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  delay: 197
+- name: '[197ms] 🇳🇱NL-193.29.139.204-0065'
+  type: ss
+  server: 193.29.139.204
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  delay: 197
+- name: '[198ms] 🇬🇧GB-82.38.31.149-0075'
+  type: ss
+  server: 82.38.31.149
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  delay: 198
+- name: '[199ms] 🇩🇪DE_1|2.1MB/s'
+  type: vless
+  server: 172.65.109.171
+  port: 25565
+  uuid: f75566a5-4744-4806-ac2e-ccaefe1b1080
+  tls: false
   network: tcp
-  cipher: auto
-  delay: 167
-- name: '[169ms] 🇺🇸US-54.184.22.123-6178'
+  udp: true
+  delay: 199
+- name: '[201ms] 🇬🇧GB-82.38.31.192-0064'
+  type: ss
+  server: 82.38.31.192
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  delay: 201
+- name: '[202ms] 🇬🇧GB-82.38.31.219-0150'
+  type: ss
+  server: 82.38.31.219
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  delay: 202
+- name: '[203ms] 🇳🇱NL-193.29.139.151-0078'
+  type: ss
+  server: 193.29.139.151
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  delay: 203
+- name: '[205ms] 🇩🇪DE-209.46.102.22-0094'
+  type: ss
+  server: 209.46.102.22
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: 1hhrqrokj3ag
+  delay: 205
+- name: '[205ms] 🇬🇧GB-82.38.31.214-0165'
+  type: ss
+  server: 82.38.31.214
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  delay: 205
+- name: '[210ms] 🇳🇱 荷兰 V2CROSS.COM'
+  type: ss
+  server: 193.168.175.56
+  port: 14605
+  cipher: chacha20-ietf-poly1305
+  password: Uk8lfmvhYnx5rJvXxKrRqGRynd9gIpJ.iY
+  delay: 210
+- name: '[211ms] 🇮🇹IT-103.241.66.76-0116'
+  type: ss
+  server: 103.241.66.76
+  port: 14605
+  cipher: chacha20-ietf-poly1305
+  password: Uk8lfmvhYnx5rJvXxKrRqGRynd9gIpJ.iY
+  delay: 211
+- name: '[215ms] 🇮🇪 IE 2'
+  type: trojan
+  server: 146.70.90.198
+  port: 57452
+  password: t1k169n5zmvvwn96r9ft
+  sni: 146.70.90.198
+  skip-cert-verify: true
+  udp: true
+  delay: 215
+- name: '[217ms] 🇬🇧GB-82.38.31.194-0161'
+  type: ss
+  server: 82.38.31.194
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  delay: 217
+- name: '[218ms] 🇮🇪IE-146.70.90.197-6153'
+  type: trojan
+  server: 146.70.90.197
+  port: 57452
+  password: t1k169n5zmvvwn96r9ft
+  sni: 146.70.90.197
+  skip-cert-verify: true
+  udp: true
+  delay: 218
+- name: '[218ms] 🇳🇱 NL 2'
+  type: ss
+  server: 192.142.18.127
+  port: 443
+  cipher: aes-256-gcm
+  password: c1fd0b29-6c18-4042-87a2-f5bd7878dc0a
+  delay: 218
+- name: '[225ms] 🇬🇧GB-82.38.31.210-0082'
+  type: ss
+  server: 82.38.31.210
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  delay: 225
+- name: '[229ms] 🇧🇷BR-38.180.221.143-0115'
+  type: ss
+  server: 38.180.221.143
+  port: 17283
+  cipher: chacha20-ietf-poly1305
+  password: bwjNPcwgz5+1gCyi+rB+nfqugw38B7tqVa
+  delay: 229
+- name: '[238ms] 🇬🇧GB-185.44.76.188-5763'
+  type: trojan
+  server: 185.44.76.188
+  port: 443
+  password: 8697fe6b-1lWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272
+  sni: 185.44.76.188
+  skip-cert-verify: true
+  udp: true
+  delay: 238
+- name: '[252ms] 🇬🇧GB-82.38.31.179-0069'
+  type: ss
+  server: 82.38.31.179
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  delay: 252
+- name: '[255ms] 🇬🇧GB-132.145.51.172-4124'
+  type: trojan
+  server: 132.145.51.172
+  port: 443
+  password: 02e653c9-7c93-46a9-999d-11834bd0c577
+  sni: 132.145.51.172
+  skip-cert-verify: true
+  udp: true
+  delay: 255
+- name: '[262ms] 🇺🇸US_6|2.7MB/s'
+  type: vless
+  server: 64.186.248.160
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  tls: true
+  network: ws
+  udp: true
+  servername: t1s1.rittbo.kdns.fr
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+  delay: 262
+- name: '[266ms] 🇫🇮FI-193.47.60.186-0100'
+  type: ss
+  server: 193.47.60.186
+  port: 28687
+  cipher: chacha20-ietf-poly1305
+  password: yKVMoB3AwiTEznpnoq2FYR
+  delay: 266
+- name: '[270ms] 🇳🇱NL-194.124.216.192-6205'
+  type: trojan
+  server: 194.124.216.192
+  port: 443
+  password: M08tvzYWtUEJNtbpHp
+  sni: 194.124.216.192
+  skip-cert-verify: true
+  udp: true
+  delay: 270
+- name: '[276ms] 🏁RELAY-91.193.58.77-0656'
+  type: trojan
+  server: 91.193.58.77
+  port: 443
+  password: humanity
+  sni: www.calmloud.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 276
+- name: '[276ms] 🇺🇸US-154.64.235.157-0716'
+  type: trojan
+  server: 154.64.235.157
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: hhcm.hhxaf.cc.cd
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+  delay: 276
+- name: '[276ms] 🇫🇷FR-51.38.99.96-2890'
+  type: trojan
+  server: 51.38.99.96
+  port: 443
+  password: b8808043-6566-4923-9195-e66bfb553d57
+  sni: ba24.ir
+  skip-cert-verify: true
+  udp: true
+  delay: 276
+- name: '[277ms] 🏁RELAY-104.16.71.213-0717'
+  type: trojan
+  server: 104.16.71.213
+  port: 443
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 277
+- name: '[278ms] 🇳🇱NL-51.158.146.183-9165'
+  type: trojan
+  server: 51.158.146.183
+  port: 443
+  password: f6a0a650-306e-11ee-b692-1239d0255272
+  sni: Speedtest.net
+  skip-cert-verify: true
+  udp: true
+  delay: 278
+- name: '[278ms] 🇩🇪 DE 17'
+  type: trojan
+  server: 51.75.86.196
+  port: 55646
+  password: 03mpolj39zyewzufal2r
+  sni: 51.75.86.196
+  skip-cert-verify: true
+  udp: true
+  delay: 278
+- name: '[280ms] 🏁RELAY-45.130.125.96-0668'
+  type: trojan
+  server: 45.130.125.96
+  port: 443
+  password: humanity
+  sni: www.calmloud.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 280
+- name: '[280ms] 🇺🇸US-198.62.62.23-0728'
+  type: trojan
+  server: 198.62.62.23
+  port: 443
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 280
+- name: '[281ms] 🇩🇪DE-185.137.157.250-0134'
+  type: trojan
+  server: 185.137.157.250
+  port: 443
+  password: n-S5Kuz58YgwljisuLEJltip2OWf1ourWz
+  sni: fra250.clientfirewall.click
+  skip-cert-verify: true
+  udp: true
+  delay: 281
+- name: '[281ms] 🏁RELAY-45.130.125.160-0726'
+  type: trojan
+  server: 45.130.125.160
+  port: 443
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 281
+- name: '[282ms] 罗马尼亚+V2CROSS.COM #2'
+  type: trojan
+  server: 185.137.157.59
+  port: 443
+  password: fFj7MAGy1VlAWmB_gMBG_27oPYTSHvV6MX
+  sni: www.lateralio.click
+  skip-cert-verify: true
+  udp: true
+  delay: 282
+- name: '[282ms] 🇩🇪DE-185.137.157.154-0133'
+  type: trojan
+  server: 185.137.157.154
+  port: 443
+  password: n-S5Kuz58YgwljisuLEJltip2OWf1ourWz
+  sni: fra154.clientfirewall.click
+  skip-cert-verify: true
+  udp: true
+  delay: 282
+- name: '[283ms] 🏁RELAY-45.130.125.32-0714'
+  type: trojan
+  server: 45.130.125.32
+  port: 443
+  password: humanity
+  sni: www.calmloud.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 283
+- name: '[283ms] 🏁RELAY-188.114.96.3-0725'
+  type: trojan
+  server: 188.114.96.3
+  port: 443
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 283
+- name: '[286ms] 🇦🇹AT-212.183.88.136-0715'
+  type: trojan
+  server: 212.183.88.136
+  port: 443
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 286
+- name: '[286ms] 🇩🇪 DE 11'
+  type: trojan
+  server: 185.137.157.149
+  port: 443
+  password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
+  sni: 185.137.157.149
+  skip-cert-verify: true
+  udp: true
+  delay: 286
+- name: '[287ms] 🇩🇪 DE 3'
+  type: trojan
+  server: 185.137.157.128
+  port: 443
+  password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
+  sni: 185.137.157.128
+  skip-cert-verify: true
+  udp: true
+  delay: 287
+- name: '[288ms] 罗马尼亚+V2CROSS.COM'
+  type: trojan
+  server: 185.137.157.142
+  port: 443
+  password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
+  sni: 185.137.157.142
+  skip-cert-verify: true
+  udp: true
+  delay: 288
+- name: '[288ms] 🏁RELAY-141.193.213.21-0654'
+  type: trojan
+  server: 141.193.213.21
+  port: 443
+  password: humanity
+  sni: www.calmloud.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 288
+- name: '[288ms] 🏁RELAY-185.18.250.245-0677'
+  type: trojan
+  server: 185.18.250.245
+  port: 443
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 288
+- name: '[288ms] 🇩🇪 DE 19'
+  type: trojan
+  server: 185.137.157.140
+  port: 443
+  password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
+  sni: 185.137.157.140
+  skip-cert-verify: true
+  udp: true
+  delay: 288
+- name: '[289ms] 🇬🇷 希腊 V2CROSS.COM'
+  type: trojan
+  server: 92.119.35.119
+  port: 443
+  password: urhj8z8R8nBovrNsYzXhL35jLGC5ruguRh
+  sni: 92.119.35.119
+  skip-cert-verify: true
+  udp: true
+  delay: 289
+- name: '[289ms] 🏁RELAY-104.17.121.43-0660'
+  type: trojan
+  server: 104.17.121.43
+  port: 443
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 289
+- name: '[289ms] 🇺🇸US-54.184.22.123-6178'
   type: trojan
   server: nearby-muskrat.rooster465.autos
   port: 443
@@ -979,317 +1100,475 @@ proxies:
   sni: nearby-muskrat.rooster465.autos
   skip-cert-verify: true
   udp: true
-  delay: 169
-- name: '[173ms] 🇨🇦CA-45.154.204.13-0141'
-  type: ssr
-  server: ssca.irundns.net
-  port: 443
-  cipher: aes-128-cfb
-  password: $$Turb0VPN$$
-  protocol: auth_aes128_md5
-  obfs: http_post
-  delay: 173
-- name: '[182ms] 美国+CloudFlare节点 #4'
+  delay: 289
+- name: '[290ms] 🏁RELAY-172.64.152.23-0712'
   type: trojan
-  server: tjsp.hhxaf.cc.cd
+  server: 172.64.152.23
   port: 443
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  sni: tjsp.hhxaf.cc.cd
+  password: humanity
+  sni: www.calmlunch.com
   skip-cert-verify: true
   udp: true
   network: ws
   ws-opts:
-    path: /
-  delay: 182
-- name: '[205ms] 🇺🇸US-194.33.45.157-6158'
+    path: /assignment
+  delay: 290
+- name: '[291ms] 🇩🇪 DE 13'
   type: trojan
-  server: 194.33.45.157
+  server: 185.137.157.135
   port: 443
-  password: 3ac6a6ca99f74941b1eaf892818e2ddb
-  sni: 194.33.45.157
+  password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
+  sni: 185.137.157.135
   skip-cert-verify: true
   udp: true
-  delay: 205
-- name: '[220ms] 🇯🇵JP-149.22.87.240-0113'
+  delay: 291
+- name: '[295ms] 🇩🇪DE-92.119.35.105-0136'
+  type: trojan
+  server: 92.119.35.105
+  port: 443
+  password: urhj8z8R8nBovrNsYzXhL35jLGC5ruguRh
+  sni: 92.119.35.105
+  skip-cert-verify: true
+  udp: true
+  delay: 295
+- name: '[302ms] 🇩🇪DE-92.119.35.93-0138'
+  type: trojan
+  server: 92.119.35.93
+  port: 443
+  password: urhj8z8R8nBovrNsYzXhL35jLGC5ruguRh
+  sni: 92.119.35.93
+  skip-cert-verify: true
+  udp: true
+  delay: 302
+- name: '[302ms] 🇩🇪 DE 12'
+  type: trojan
+  server: 185.137.157.156
+  port: 443
+  password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
+  sni: 185.137.157.156
+  skip-cert-verify: true
+  udp: true
+  delay: 302
+- name: '[303ms] 🏁RELAY-104.19.229.21-0721'
+  type: trojan
+  server: 104.19.229.21
+  port: 443
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 303
+- name: '[304ms] 🇩🇪DE-92.119.35.131-0137'
+  type: trojan
+  server: 92.119.35.131
+  port: 443
+  password: urhj8z8R8nBovrNsYzXhL35jLGC5ruguRh
+  sni: 92.119.35.131
+  skip-cert-verify: true
+  udp: true
+  delay: 304
+- name: '[309ms] 🏁RELAY-141.193.213.11-0624'
+  type: trojan
+  server: 141.193.213.11
+  port: 443
+  password: humanity
+  sni: www.calmloud.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 309
+- name: '[310ms] 美国+CloudFlare节点 #2'
+  type: vless
+  server: 108.162.192.75
+  port: 443
+  uuid: 7e544a9d-7667-413b-bbb0-b3bb1aac6d77
+  tls: true
+  network: ws
+  udp: true
+  servername: shegeftihaaa.net
+  client-fingerprint: chrome
+  ws-opts:
+    path: /rsedgws
+    headers:
+      Host: shegeftihaaa.net
+  delay: 310
+- name: '[312ms] 美国+V2CROSS.COM'
+  type: trojan
+  server: 199.181.197.143
+  port: 443
+  password: humanity
+  sni: www.calmloud.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmloud.com
+  delay: 312
+- name: '[314ms] 🇩🇪DE-92.119.35.87-0131'
+  type: trojan
+  server: 92.119.35.87
+  port: 443
+  password: urhj8z8R8nBovrNsYzXhL35jLGC5ruguRh
+  sni: 92.119.35.87
+  skip-cert-verify: true
+  udp: true
+  delay: 314
+- name: '[316ms] 美国+CloudFlare节点 #3'
+  type: trojan
+  server: www.calmlunch.com
+  port: 443
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.calmlunch.com
+  delay: 316
+- name: '[321ms] 🇯🇵JP-149.22.87.240-0113'
   type: ss
   server: 149.22.87.240
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-  delay: 220
-- name: '[222ms] 🇯🇵JP-149.22.87.241-0110'
-  type: ss
-  server: 149.22.87.241
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  delay: 222
-- name: '[228ms] 🇯🇵JP-47.79.144.115-0181'
-  type: ss
-  server: 47.79.144.115
-  port: 40003
-  cipher: aes-256-gcm
-  password: GTZI5AbjNAeWQG0oVNptvWJogHNKiiKA
-  delay: 228
-- name: '[235ms] 🇯🇵JP-149.22.87.204-0111'
+  delay: 321
+- name: '[323ms] 🇯🇵JP-149.22.87.204-0111'
   type: ss
   server: 149.22.87.204
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-  delay: 235
-- name: '[268ms] 🇬🇧 GB 1'
+  delay: 323
+- name: '[325ms] 🇯🇵JP-47.79.144.115-0181'
   type: ss
-  server: 158.173.24.73
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  delay: 268
-- name: '[280ms] 🇬🇧GB-146.70.61.37-0093'
-  type: ss
-  server: 146.70.61.37
-  port: 8080
-  cipher: rc4-md5
-  password: 14fFPrbezE3HDZzsMOr6
-  delay: 280
-- name: '[281ms] 🇳🇱NL-158.173.20.171-0095'
-  type: ss
-  server: 158.173.20.171
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  delay: 281
-- name: '[283ms] 🇳🇱NL-109.201.152.181-0127'
-  type: ss
-  server: 109.201.152.181
-  port: 443
-  cipher: aes-128-cfb
-  password: shadowsocks
-  delay: 283
-- name: '[284ms] 澳大利亚+新南威尔士州悉尼Choopa数据中心'
-  type: ss
-  server: 45.77.232.213
-  port: 15675
-  cipher: chacha20-ietf-poly1305
-  password: TWG7J1KR5KsPaV5qZI+rieueKxxafZSpCH
-  delay: 284
-- name: '[285ms] 🇦🇺 AU 1'
-  type: ss
-  server: 103.106.231.82
-  port: 5600
+  server: 47.79.144.115
+  port: 40003
   cipher: aes-256-gcm
-  password: Y6R9pAtvxxzmGC
-  delay: 285
-- name: '[293ms] 🇬🇧GB-141.98.101.178-0120'
+  password: GTZI5AbjNAeWQG0oVNptvWJogHNKiiKA
+  delay: 325
+- name: '[327ms] 🇯🇵JP-149.22.87.241-0110'
   type: ss
-  server: 141.98.101.178
+  server: 149.22.87.241
   port: 443
   cipher: aes-128-gcm
   password: shadowsocks
-  delay: 293
-- name: '[297ms] 🇩🇪DE-8.209.74.72-0098'
+  delay: 327
+- name: '[333ms] 美国+CloudFlare节点 #7'
+  type: vless
+  server: elliot.ns.cloudflare.com
+  port: 443
+  uuid: c35050ce-01ab-45a9-91b8-54cec637d0a8
+  tls: true
+  network: ws
+  udp: true
+  servername: octopusss5.info
+  ws-opts:
+    path: /udfyfws
+    headers:
+      Host: octopusss5.info
+  delay: 333
+- name: '[337ms] 美国+CloudFlare节点 #4'
+  type: vless
+  server: 104.26.12.222
+  port: 443
+  uuid: c35050ce-01ab-45a9-91b8-54cec637d0a8
+  tls: true
+  network: ws
+  udp: true
+  servername: octopusss5.info
+  client-fingerprint: chrome
+  ws-opts:
+    path: /udfyfws
+    headers:
+      Host: octopusss5.info
+  delay: 337
+- name: '[354ms] 🇳🇴NO-185.213.23.63-0130'
   type: ss
-  server: 8.209.74.72
-  port: 20001
+  server: 185.213.23.63
+  port: 990
   cipher: chacha20-ietf-poly1305
-  password: PWpjPo3tqhPN4yRZ
-  delay: 297
-- name: '[298ms] 🇩🇪DE-213.202.208.199-0172'
+  password: ARgvGZywA+gacgGV26Bvmu05+wZmRW/j+AdU+Z8Bt44=
+  delay: 354
+- name: '[358ms] 🇳🇱NL-194.124.216.109-6204'
+  type: trojan
+  server: nl-4.tr202507.com
+  port: 443
+  password: uThbm8eGmXZ7GKqnWy
+  sni: nl-4.tr202507.com
+  skip-cert-verify: true
+  udp: true
+  delay: 358
+- name: '[366ms] 🇬🇧GB-82.38.31.189-0079'
+  type: ss
+  server: 82.38.31.189
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  delay: 366
+- name: '[367ms] 🇫🇷FR-51.77.213.197-5483'
+  type: trojan
+  server: 51.77.213.197
+  port: 443
+  password: 973ed2e0-c4d8-4737-a093-71629148086d
+  sni: frt2.sshocean.net
+  skip-cert-verify: true
+  udp: true
+  delay: 367
+- name: '[376ms] 🇩🇪DE-213.202.208.199-0172'
   type: ss
   server: 213.202.208.199
   port: 7001
   cipher: aes-256-gcm
   password: RexnBgU7EV5ADxG
-  delay: 298
-- name: '[302ms] 🇬🇧GB-141.98.101.181-0109'
-  type: ss
-  server: 141.98.101.181
+  delay: 376
+- name: '[381ms] 🏁RELAY-172.66.47.69-0729'
+  type: trojan
+  server: 172.66.47.69
   port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  delay: 302
-- name: '[302ms] 🇬🇧GB-82.38.31.214-0165'
+  password: humanity
+  sni: www.multiplydose.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 381
+- name: '[390ms] 🇩🇪DE-94.103.173.70-0097'
+  type: trojan
+  server: de-1.hysteria.ltd
+  port: 9443
+  password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
+  sni: de-1.hysteria.ltd
+  skip-cert-verify: true
+  udp: true
+  delay: 390
+- name: '[392ms] 🇦🇺 AU 1'
   type: ss
-  server: 82.38.31.214
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  delay: 302
-- name: '[303ms] 🇬🇧GB-141.98.101.182-0128'
-  type: ss
-  server: 141.98.101.182
+  server: 103.106.231.82
+  port: 5600
+  cipher: aes-256-gcm
+  password: Y6R9pAtvxxzmGC
+  delay: 392
+- name: '[407ms] 🇳🇱NL_6|2.2MB/s'
+  type: vless
+  server: 85.155.98.34
   port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  delay: 303
-- name: '[304ms] 🇬🇧GB-82.38.31.192-0064'
+  uuid: 0970324b-8c61-4ae7-8c3f-385a6f1e17e4
+  tls: true
+  network: ws
+  udp: true
+  servername: vpn47.cc.cd
+  ws-opts:
+    path: /fp=chrome
+    headers:
+      Host: vpn47.cc.cd
+  delay: 407
+- name: '[410ms] 🇸🇬 澳大利亚 新南威尔士州悉尼Choopa数据中心'
   type: ss
-  server: 82.38.31.192
-  port: 8080
+  server: 45.77.232.213
+  port: 15675
   cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  delay: 304
-- name: '[306ms] 🇳🇱NL-193.29.139.151-0078'
-  type: ss
-  server: 193.29.139.151
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  delay: 306
-- name: '[306ms] 🇬🇧GB-82.38.31.2-0159'
-  type: ss
-  server: 82.38.31.2
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  delay: 306
-- name: '[307ms] 🇬🇧GB-82.38.31.194-0161'
-  type: ss
-  server: 82.38.31.194
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  delay: 307
-- name: '[307ms] 🇬🇧GB-141.98.101.179-0129'
-  type: ss
-  server: 141.98.101.179
-  port: 443
-  cipher: aes-128-gcm
-  password: shadowsocks
-  delay: 307
-- name: '[308ms] 🇬🇧GB-82.38.31.205-0076'
-  type: ss
-  server: 82.38.31.205
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  delay: 308
-- name: '[308ms] 🇬🇧GB-82.38.31.202-0073'
-  type: ss
-  server: 82.38.31.202
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  delay: 308
-- name: '[308ms] 🇳🇱NL-193.29.139.235-0070'
-  type: ss
-  server: 193.29.139.235
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  delay: 308
-- name: '[309ms] 🇩🇪DE-209.46.102.22-0094'
-  type: ss
-  server: 209.46.102.22
-  port: 8388
-  cipher: chacha20-ietf-poly1305
-  password: 1hhrqrokj3ag
-  delay: 309
-- name: '[310ms] 🇬🇧GB-82.38.31.210-0082'
-  type: ss
-  server: 82.38.31.210
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  delay: 310
-- name: '[310ms] 🇬🇧GB-82.38.31.191-0074'
-  type: ss
-  server: 82.38.31.191
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  delay: 310
-- name: '[312ms] 🇨🇦CA-23.162.200.227-8009'
+  password: TWG7J1KR5KsPaV5qZI+rieueKxxafZSpCH
+  delay: 410
+- name: '[421ms] 🇮🇹IT-57.131.32.191-2122'
   type: vmess
-  server: 23.162.200.227
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  server: 57.131.32.191
+  port: 8443
+  uuid: 848af33c-81f2-40c9-93b2-4681d056936b
   alterId: 0
   cipher: auto
   tls: true
   skip-cert-verify: true
   network: ws
   ws-opts:
-    path: /linkvws
-  delay: 312
-- name: '[313ms] 🇬🇧GB-94.156.250.148-0124'
+    path: /vmess/
+    headers:
+      Host: OV-Italy1.09vpn.com
+  servername: OV-Italy1.09vpn.com
+  delay: 421
+- name: '[422ms] 🇲🇩MD-94.131.108.36-6260'
+  type: vmess
+  server: 94.131.108.36
+  port: 443
+  uuid: 9855f1f0-a800-40d4-8b38-c7d3eb79302d
+  alterId: 0
+  cipher: auto
+  tls: false
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+  delay: 422
+- name: '[427ms] 🏁RELAY-188.114.98.0-0670'
+  type: trojan
+  server: 188.114.98.0
+  port: 443
+  password: humanity
+  sni: www.creationlong.org
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 427
+- name: '[428ms] 🏁RELAY-104.20.6.134-2445'
+  type: trojan
+  server: 104.20.6.134
+  port: 443
+  password: humanity
+  sni: www.calmloud.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 428
+- name: '[430ms] 🏁RELAY-172.64.147.166-0727'
+  type: trojan
+  server: 172.64.147.166
+  port: 443
+  password: humanity
+  sni: www.multiplydose.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 430
+- name: '[431ms] 🇷🇺 RU俄罗斯(mibei77.com 米贝节点分享) #3'
   type: ss
-  server: 94.156.250.148
-  port: 7001
+  server: 212.192.13.91
+  port: 30129
   cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  delay: 313
-- name: '[313ms] 🇳🇱NL-193.29.139.204-0065'
+  password: 7e1dd4c55bf85da5
+  delay: 431
+- name: '[433ms] 🏁RELAY-45.130.125.75-0718'
+  type: trojan
+  server: 45.130.125.75
+  port: 443
+  password: humanity
+  sni: www.calmlunch.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 433
+- name: '[434ms] 🇿🇦ZA-102.37.156.224-0118'
   type: ss
-  server: 193.29.139.204
-  port: 8080
+  server: 102.37.156.224
+  port: 443
   cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  delay: 313
-- name: '[314ms] 🇬🇧GB-82.38.31.149-0075'
+  password: aduB9HGxQHjA2SBMRjkHX6
+  delay: 434
+- name: '[442ms] 🇿🇦ZA-102.133.165.160-0119'
   type: ss
-  server: 82.38.31.149
-  port: 8080
+  server: 102.133.165.160
+  port: 16233
   cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  delay: 314
-- name: '[321ms] 荷兰+V2CROSS.COM'
+  password: Xsy8Ox4yOV3xLlpxtjzs3X
+  delay: 442
+- name: '[447ms] 🇸🇬 新加坡 Choopa数据中心'
   type: ss
-  server: 193.168.175.56
-  port: 14605
+  server: 45.32.122.179
+  port: 23027
   cipher: chacha20-ietf-poly1305
-  password: Uk8lfmvhYnx5rJvXxKrRqGRynd9gIpJ.iY
-  delay: 321
-- name: '[323ms] 🇮🇹IT-103.241.66.76-0116'
+  password: I-bP3lFh.dTG3XitF7XtVK83CZ7rI2Ut=n
+  delay: 447
+- name: '[448ms] 🇺🇸US-208.103.161.101-0723'
+  type: trojan
+  server: 208.103.161.101
+  port: 443
+  password: humanity
+  sni: www.creationlong.org
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 448
+- name: '[459ms] 🏁RELAY-172.66.44.211-0647'
+  type: trojan
+  server: 172.66.44.211
+  port: 443
+  password: humanity
+  sni: www.multiplydose.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 459
+- name: '[465ms] 🇬🇧GB-82.38.31.184-0088'
   type: ss
-  server: 103.241.66.76
-  port: 14605
-  cipher: chacha20-ietf-poly1305
-  password: Uk8lfmvhYnx5rJvXxKrRqGRynd9gIpJ.iY
-  delay: 323
-- name: '[327ms] 🇧🇷BR-38.180.221.143-0115'
-  type: ss
-  server: 38.180.221.143
-  port: 17283
-  cipher: chacha20-ietf-poly1305
-  password: bwjNPcwgz5+1gCyi+rB+nfqugw38B7tqVa
-  delay: 327
-- name: '[329ms] 🇬🇧GB-82.38.31.199-0156'
-  type: ss
-  server: 82.38.31.199
+  server: 82.38.31.184
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-  delay: 329
-- name: '[332ms] 🇳🇱 NL 2'
-  type: ss
-  server: 192.142.18.127
+  delay: 465
+- name: '[480ms] 🏁RELAY-45.130.125.126-0651'
+  type: trojan
+  server: 45.130.125.126
   port: 443
-  cipher: aes-256-gcm
-  password: c1fd0b29-6c18-4042-87a2-f5bd7878dc0a
-  delay: 332
-- name: '[335ms] 🇬🇧GB-82.38.31.176-0168'
+  password: humanity
+  sni: www.multiplydose.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 480
+- name: '[493ms] 🇰🇷KR-218.237.185.230-0174'
   type: ss
-  server: 82.38.31.176
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  delay: 335
-- name: '[346ms] 🇩🇪DE-5.230.184.16-0096'
-  type: ss
-  server: 5.230.184.16
+  server: 218.237.185.230
+  port: 4652
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  delay: 493
+- name: '[494ms] 🏁RELAY-8.6.112.0-0659'
+  type: trojan
+  server: 8.6.112.0
   port: 443
-  cipher: chacha20-ietf-poly1305
-  password: 453u6Gcei04NyXbrWLKa0M
-  delay: 346
-- name: '[347ms] 🏇63@NetFlowTools'
+  password: humanity
+  sni: www.multiplydose.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 494
+- name: '[495ms] 🏇63@NetFlowTools'
   type: hysteria2
   server: 13.231.108.76
   port: 443
   password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   skip-cert-verify: true
-  delay: 347
-- name: '[351ms] 🇯🇵JP-140.83.51.161-1328'
+  delay: 495
+- name: '[499ms] 🇧🇬_BG_保加利亚->🇩🇪_DE_德国'
+  type: vless
+  server: 79.124.7.236
+  port: 444
+  uuid: 0970324b-8c61-4ae7-8c3f-385a6f1e17e4
+  tls: true
+  network: ws
+  udp: true
+  servername: vpn47.cc.cd
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: vpn47.cc.cd
+  delay: 499
+- name: '[501ms] 🇯🇵JP-140.83.51.161-1328'
   type: vmess
   server: 140.83.51.161
   port: 25686
@@ -1303,555 +1582,8 @@ proxies:
     path: /cctv13.m3u8
     headers:
       Host: jp02.a0a.xyz
-  delay: 351
-- name: '[361ms] 新加坡+Choopa数据中心'
-  type: ss
-  server: 45.32.122.179
-  port: 23027
-  cipher: chacha20-ietf-poly1305
-  password: I-bP3lFh.dTG3XitF7XtVK83CZ7rI2Ut=n
-  delay: 361
-- name: '[365ms] 🇫🇮FI-193.47.60.186-0100'
-  type: ss
-  server: 193.47.60.186
-  port: 28687
-  cipher: chacha20-ietf-poly1305
-  password: yKVMoB3AwiTEznpnoq2FYR
-  delay: 365
-- name: '[369ms] 🇮🇪IE-146.70.90.197-6153'
-  type: trojan
-  server: 146.70.90.197
-  port: 57452
-  password: t1k169n5zmvvwn96r9ft
-  sni: 146.70.90.197
-  skip-cert-verify: true
-  udp: true
-  delay: 369
-- name: '[375ms] 🇰🇷KR-218.237.185.230-0174'
-  type: ss
-  server: 218.237.185.230
-  port: 4652
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  delay: 375
-- name: '[382ms] 🇮🇪 IE 2'
-  type: trojan
-  server: 146.70.90.198
-  port: 57452
-  password: t1k169n5zmvvwn96r9ft
-  sni: 146.70.90.198
-  skip-cert-verify: true
-  udp: true
-  delay: 382
-- name: '[393ms] 🇳🇱NL-194.124.216.192-6205'
-  type: trojan
-  server: 194.124.216.192
-  port: 443
-  password: M08tvzYWtUEJNtbpHp
-  sni: 194.124.216.192
-  skip-cert-verify: true
-  udp: true
-  delay: 393
-- name: '[394ms] 🇸🇬 SG 2'
-  type: ss
-  server: 103.36.91.23
-  port: 8388
-  cipher: chacha20-ietf
-  password: asd123456
-  delay: 394
-- name: '[404ms] 🇬🇧GB-132.145.51.172-4124'
-  type: trojan
-  server: 132.145.51.172
-  port: 443
-  password: 02e653c9-7c93-46a9-999d-11834bd0c577
-  sni: 132.145.51.172
-  skip-cert-verify: true
-  udp: true
-  delay: 404
-- name: '[407ms] 🇳🇱NL-51.158.146.183-9165'
-  type: trojan
-  server: 51.158.146.183
-  port: 443
-  password: f6a0a650-306e-11ee-b692-1239d0255272
-  sni: Speedtest.net
-  skip-cert-verify: true
-  udp: true
-  delay: 407
-- name: '[409ms] 🇩🇪 DE德国(mibei77.com 米贝节点分享) #2'
-  type: ss
-  server: 46.17.43.147
-  port: 30129
-  cipher: aes-256-gcm
-  password: 32c0ea6e823341a2
-  delay: 409
-- name: '[409ms] 🇬🇧GB-185.44.76.188-5763'
-  type: trojan
-  server: 185.44.76.188
-  port: 443
-  password: 8697fe6b-1lWNFc1RmRBNk5NQU5KSnga3fa58ac5a3ef0-b4ab-11eb-b65e-1239d0255272
-  sni: 185.44.76.188
-  skip-cert-verify: true
-  udp: true
-  delay: 409
-- name: '[418ms] 美国+CloudFlare节点 #5'
-  type: trojan
-  server: space.byu.id.yxls.eu.cc
-  port: 443
-  password: f922fa0f-3311-4368-85ff-cf65e727c854
-  sni: space.byu.id.yxls.eu.cc
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /br-orcl
-  delay: 418
-- name: '[418ms] 🇰🇷KR-3.38.255.122-6170'
-  type: trojan
-  server: glowing-deer.rooster465.autos
-  port: 443
-  password: ZY07256934
-  sni: glowing-deer.rooster465.autos
-  skip-cert-verify: true
-  udp: true
-  delay: 418
-- name: '[419ms] 🇩🇪DE-92.119.35.131-0137'
-  type: trojan
-  server: 92.119.35.131
-  port: 443
-  password: urhj8z8R8nBovrNsYzXhL35jLGC5ruguRh
-  sni: 92.119.35.131
-  skip-cert-verify: true
-  udp: true
-  delay: 419
-- name: '[422ms] 🇩🇪DE-185.137.157.250-0134'
-  type: trojan
-  server: 185.137.157.250
-  port: 443
-  password: n-S5Kuz58YgwljisuLEJltip2OWf1ourWz
-  sni: fra250.clientfirewall.click
-  skip-cert-verify: true
-  udp: true
-  delay: 422
-- name: '[422ms] 🇩🇪DE-92.119.35.123-0106'
-  type: trojan
-  server: 92.119.35.123
-  port: 443
-  password: aR9EJWEB2Jp3m6xKJK=Ct7kLyqFSU-iDBR
-  sni: 92.119.35.123
-  skip-cert-verify: true
-  udp: true
-  delay: 422
-- name: '[423ms] 🇩🇪DE-92.119.35.117-0105'
-  type: trojan
-  server: 92.119.35.117
-  port: 443
-  password: aR9EJWEB2Jp3m6xKJK=Ct7kLyqFSU-iDBR
-  sni: 92.119.35.117
-  skip-cert-verify: true
-  udp: true
-  delay: 423
-- name: '[424ms] 🇩🇪 DE 11'
-  type: trojan
-  server: 185.137.157.149
-  port: 443
-  password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
-  sni: 185.137.157.149
-  skip-cert-verify: true
-  udp: true
-  delay: 424
-- name: '[426ms] 🇯🇵JP-103.125.216.68-0126'
-  type: trojan
-  server: 103.125.216.68
-  port: 443
-  password: T9qoEuuxUEa9Dk3KxnTWrs6J8ilng9sCIf
-  sni: 103.125.216.68
-  skip-cert-verify: true
-  udp: true
-  delay: 426
-- name: '[427ms] 🇰🇷KR-123.140.124.25-4246'
-  type: trojan
-  server: official.seoulcityhall.com.ua
-  port: 2053
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  sni: official.seoulcityhall.com.ua
-  skip-cert-verify: true
-  udp: true
-  delay: 427
-- name: '[428ms] 🇳🇱NL-194.124.216.109-6204'
-  type: trojan
-  server: nl-4.tr202507.com
-  port: 443
-  password: uThbm8eGmXZ7GKqnWy
-  sni: nl-4.tr202507.com
-  skip-cert-verify: true
-  udp: true
-  delay: 428
-- name: '[430ms] 🇩🇪DE-92.119.35.97-0132'
-  type: trojan
-  server: 92.119.35.97
-  port: 443
-  password: urhj8z8R8nBovrNsYzXhL35jLGC5ruguRh
-  sni: 92.119.35.97
-  skip-cert-verify: true
-  udp: true
-  delay: 430
-- name: '[432ms] 🇩🇪DE-185.137.157.59-0189'
-  type: trojan
-  server: 185.137.157.59
-  port: 443
-  password: fFj7MAGy1VlAWmB_gMBG_27oPYTSHvV6MX
-  sni: www.lateralio.click
-  skip-cert-verify: true
-  udp: true
-  delay: 432
-- name: '[433ms] 🇰🇷KR-13.125.84.24-6154'
-  type: trojan
-  server: touching-pigeon.rooster465.autos
-  port: 443
-  password: WF42809561
-  sni: touching-pigeon.rooster465.autos
-  skip-cert-verify: true
-  udp: true
-  delay: 433
-- name: '[433ms] 🇩🇪 DE 3'
-  type: trojan
-  server: 185.137.157.128
-  port: 443
-  password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
-  sni: 185.137.157.128
-  skip-cert-verify: true
-  udp: true
-  delay: 433
-- name: '[438ms] 🇰🇷KR-3.34.143.133-6176'
-  type: trojan
-  server: growing-tuna.rooster465.autos
-  port: 443
-  password: IL37892054
-  sni: growing-tuna.rooster465.autos
-  skip-cert-verify: true
-  udp: true
-  delay: 438
-- name: '[440ms] 罗马尼亚+V2CROSS.COM'
-  type: trojan
-  server: 185.137.157.138
-  port: 443
-  password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
-  sni: 185.137.157.138
-  skip-cert-verify: true
-  udp: true
-  delay: 440
-- name: '[440ms] 🇬🇧GB-82.38.31.219-0150'
-  type: ss
-  server: 82.38.31.219
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  delay: 440
-- name: '[441ms] 🇩🇪DE-185.137.157.154-0133'
-  type: trojan
-  server: 185.137.157.154
-  port: 443
-  password: n-S5Kuz58YgwljisuLEJltip2OWf1ourWz
-  sni: fra154.clientfirewall.click
-  skip-cert-verify: true
-  udp: true
-  delay: 441
-- name: '[442ms] 🇯🇵JP-52.195.12.80-6155'
-  type: trojan
-  server: upright-rhino.rooster465.autos
-  port: 443
-  password: IL37892054
-  sni: upright-rhino.rooster465.autos
-  skip-cert-verify: true
-  udp: true
-  delay: 442
-- name: '[443ms] 🇩🇪 DE 13'
-  type: trojan
-  server: 185.137.157.135
-  port: 443
-  password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
-  sni: 185.137.157.135
-  skip-cert-verify: true
-  udp: true
-  delay: 443
-- name: '[444ms] 🇩🇪DE-92.119.35.127-0103'
-  type: trojan
-  server: 92.119.35.127
-  port: 443
-  password: aR9EJWEB2Jp3m6xKJK=Ct7kLyqFSU-iDBR
-  sni: 92.119.35.127
-  skip-cert-verify: true
-  udp: true
-  delay: 444
-- name: '[445ms] 🇩🇪DE-92.119.35.87-0131'
-  type: trojan
-  server: 92.119.35.87
-  port: 443
-  password: urhj8z8R8nBovrNsYzXhL35jLGC5ruguRh
-  sni: 92.119.35.87
-  skip-cert-verify: true
-  udp: true
-  delay: 445
-- name: '[447ms] 🇩🇪DE-92.119.35.93-0138'
-  type: trojan
-  server: 92.119.35.93
-  port: 443
-  password: urhj8z8R8nBovrNsYzXhL35jLGC5ruguRh
-  sni: 92.119.35.93
-  skip-cert-verify: true
-  udp: true
-  delay: 447
-- name: '[449ms] 🇩🇪DE-92.119.35.105-0136'
-  type: trojan
-  server: 92.119.35.105
-  port: 443
-  password: urhj8z8R8nBovrNsYzXhL35jLGC5ruguRh
-  sni: 92.119.35.105
-  skip-cert-verify: true
-  udp: true
-  delay: 449
-- name: '[450ms] 🇫🇷FR-51.38.99.96-2890'
-  type: trojan
-  server: 51.38.99.96
-  port: 443
-  password: b8808043-6566-4923-9195-e66bfb553d57
-  sni: ba24.ir
-  skip-cert-verify: true
-  udp: true
-  delay: 450
-- name: '[456ms] 罗马尼亚+V2CROSS.COM #2'
-  type: trojan
-  server: 185.137.157.151
-  port: 443
-  password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
-  sni: 185.137.157.151
-  skip-cert-verify: true
-  udp: true
-  delay: 456
-- name: '[457ms] 🇯🇵JP-108.160.132.132-0644'
-  type: trojan
-  server: 108.160.132.132
-  port: 443
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  sni: tjsp.hhxaf.cc.cd
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-  delay: 457
-- name: '[459ms] 🇯🇵JP_10|1.6MB/s'
-  type: vless
-  server: 167.179.84.175
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 459
-- name: '[460ms] 🇩🇪DE-92.119.35.120-0102'
-  type: trojan
-  server: 92.119.35.120
-  port: 443
-  password: aR9EJWEB2Jp3m6xKJK=Ct7kLyqFSU-iDBR
-  sni: 92.119.35.120
-  skip-cert-verify: true
-  udp: true
-  delay: 460
-- name: '[461ms] 🇯🇵JP_11|1.6MB/s'
-  type: vless
-  server: 108.160.131.197
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 461
-- name: '[463ms] 🇯🇵JP-64.176.36.61-6200'
-  type: trojan
-  server: 64.176.36.61
-  port: 443
-  password: 8r<[9'l6hAO#8ZQi
-  sni: 64.176.36.61
-  skip-cert-verify: true
-  udp: true
-  delay: 463
-- name: '[469ms] 🇳🇱NL-194.124.216.187-6203'
-  type: trojan
-  server: nl-4.tr202512.com
-  port: 443
-  password: M08tvzYWtUEJNtbpHp
-  sni: nl-4.tr202512.com
-  skip-cert-verify: true
-  udp: true
-  delay: 469
-- name: '[470ms] 🇦🇹AT-185.126.236.44-2106'
-  type: trojan
-  server: 185.126.236.44
-  port: 443
-  password: BSs5IAVMQdYuykvDsOYZoa6gNPSGBjAbLL
-  sni: www.mesaly.click
-  skip-cert-verify: true
-  udp: true
-  delay: 470
-- name: '[471ms] 🇩🇪 DE 17'
-  type: trojan
-  server: 51.75.86.196
-  port: 55646
-  password: 03mpolj39zyewzufal2r
-  sni: 51.75.86.196
-  skip-cert-verify: true
-  udp: true
-  delay: 471
-- name: '[474ms] 🇯🇵JP-3.113.25.200-6167'
-  type: trojan
-  server: engaging-toucan.rooster465.autos
-  port: 443
-  password: IL37892054
-  sni: engaging-toucan.rooster465.autos
-  skip-cert-verify: true
-  udp: true
-  delay: 474
-- name: '[478ms] 🇯🇵JP_1|2.6MB/s'
-  type: vless
-  server: 167.179.82.79
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  tls: true
-  network: ws
-  udp: true
-  servername: t1s1.rittbo.kdns.fr
-  ws-opts:
-    path: /fp=chrome
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-  delay: 478
-- name: '[485ms] 🇯🇵JP-64.176.36.17-0713'
-  type: trojan
-  server: 64.176.36.17
-  port: 443
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  sni: tjsp.hhxaf.cc.cd
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-  delay: 485
-- name: '[493ms] 🇬🇧GB-82.38.31.216-0145'
-  type: ss
-  server: 82.38.31.216
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  delay: 493
-- name: '[502ms] 🏁RELAY-45.130.125.126-0651'
-  type: trojan
-  server: 45.130.125.126
-  port: 443
-  password: humanity
-  sni: www.multiplydose.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 502
-- name: '[502ms] 🏁RELAY-104.17.121.43-0660'
-  type: trojan
-  server: 104.17.121.43
-  port: 443
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 502
-- name: '[504ms] 🏁RELAY-104.19.229.21-0721'
-  type: trojan
-  server: 104.19.229.21
-  port: 443
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 504
-- name: '[510ms] 🏁RELAY-172.64.152.23-0712'
-  type: trojan
-  server: 172.64.152.23
-  port: 443
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 510
-- name: '[512ms] 🏁RELAY-185.18.250.245-0677'
-  type: trojan
-  server: 185.18.250.245
-  port: 443
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 512
-- name: '[515ms] 🏁RELAY-172.66.44.211-0647'
-  type: trojan
-  server: 172.66.44.211
-  port: 443
-  password: humanity
-  sni: www.multiplydose.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 515
-- name: '[516ms] 🏁RELAY-8.6.112.0-0659'
-  type: trojan
-  server: 8.6.112.0
-  port: 443
-  password: humanity
-  sni: www.multiplydose.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 516
-- name: '[520ms] 🏁RELAY-172.64.147.166-0727'
-  type: trojan
-  server: 172.64.147.166
-  port: 443
-  password: humanity
-  sni: www.multiplydose.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 520
-- name: '[522ms] 🏁RELAY-104.21.40.34-0648'
+  delay: 501
+- name: '[503ms] 🏁RELAY-104.21.40.34-0648'
   type: trojan
   server: 104.21.40.34
   port: 443
@@ -1862,29 +1594,8 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-  delay: 522
-- name: '[524ms] 🇯🇵JP-103.125.216.18-0158'
-  type: trojan
-  server: 103.125.216.18
-  port: 443
-  password: T9qoEuuxUEa9Dk3KxnTWrs6J8ilng9sCIf
-  sni: 103.125.216.18
-  skip-cert-verify: true
-  udp: true
-  delay: 524
-- name: '[525ms] 🏁RELAY-104.19.208.184-0666'
-  type: trojan
-  server: 104.19.208.184
-  port: 443
-  password: humanity
-  sni: www.multiplydose.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 525
-- name: '[526ms] 🏁RELAY-162.159.17.189-0655'
+  delay: 503
+- name: '[512ms] 🏁RELAY-162.159.17.189-0655'
   type: trojan
   server: 162.159.17.189
   port: 443
@@ -1895,276 +1606,83 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-  delay: 526
-- name: '[529ms] 🇰🇷KR-38.60.220.65-0154'
-  type: trojan
-  server: 38.60.220.65
-  port: 443
-  password: t5FsyeQXkNCY6eVGiqBXmPu4..jBEpNbak
-  sni: 38.60.220.65
-  skip-cert-verify: true
-  udp: true
-  delay: 529
-- name: '[530ms] 🇿🇦ZA-102.37.156.224-0118'
-  type: ss
-  server: 102.37.156.224
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: aduB9HGxQHjA2SBMRjkHX6
-  delay: 530
-- name: '[531ms] 🇸🇬SG-18.140.67.76-6643'
-  type: trojan
-  server: 18.140.67.76
-  port: 443
-  password: iyinglong
-  sni: 18.140.67.76
-  skip-cert-verify: true
-  udp: true
-  delay: 531
-- name: '[532ms] 🇿🇦ZA-102.133.165.160-0119'
-  type: ss
-  server: 102.133.165.160
-  port: 16233
-  cipher: chacha20-ietf-poly1305
-  password: Xsy8Ox4yOV3xLlpxtjzs3X
-  delay: 532
-- name: '[532ms] 🇰🇷KR-43.203.230.64-6161'
-  type: trojan
-  server: outgoing-ladybird.rooster465.autos
-  port: 443
-  password: IL37892054
-  sni: outgoing-ladybird.rooster465.autos
-  skip-cert-verify: true
-  udp: true
-  delay: 532
-- name: '[534ms] 🏁RELAY-104.16.71.213-0717'
-  type: trojan
-  server: 104.16.71.213
-  port: 443
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 534
-- name: '[538ms] 🇸🇬SG-43.160.197.160-6115'
-  type: trojan
-  server: 43.160.197.160
-  port: 443
-  password: 38f169d6-d202-4b1b-8db8-e6eb1648f5cf
-  sni: 43.160.197.160
-  skip-cert-verify: true
-  udp: true
-  delay: 538
-- name: '[541ms] 🇰🇷KR-218.237.185.230-0173'
-  type: ss
-  server: p141.panda001.net
-  port: 4652
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  delay: 541
-- name: '[541ms] 🇰🇷KR-123.140.124.25-4117'
-  type: trojan
-  server: official.seoulcityhall.com.ua
-  port: 8443
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  sni: official.seoulcityhall.com.ua
-  skip-cert-verify: true
-  udp: true
-  delay: 541
-- name: '[543ms] 🇺🇸US-198.62.62.23-0728'
-  type: trojan
-  server: 198.62.62.23
-  port: 443
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 543
-- name: '[545ms] 🏁RELAY-104.20.6.134-2445'
-  type: trojan
-  server: 104.20.6.134
-  port: 443
-  password: humanity
-  sni: www.calmloud.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 545
-- name: '[547ms] 🇸🇬SG-5.180.78.22-6180'
-  type: trojan
-  server: 5.180.78.22
-  port: 443
-  password: d30ab83dbde4480082048fb315bedebd
-  sni: 5.180.78.22
-  skip-cert-verify: true
-  udp: true
-  delay: 547
-- name: '[551ms] 🏁RELAY-188.114.96.3-0725'
-  type: trojan
-  server: 188.114.96.3
-  port: 443
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 551
-- name: '[554ms] 🏁RELAY-172.66.47.69-0729'
-  type: trojan
-  server: 172.66.47.69
-  port: 443
-  password: humanity
-  sni: www.multiplydose.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 554
-- name: '[556ms] 🇸🇬SG-54.169.245.181-6117'
-  type: trojan
-  server: engaged-ram.rooster465.autos
-  port: 443
-  password: IL37892054
-  sni: engaged-ram.rooster465.autos
-  skip-cert-verify: true
-  udp: true
-  delay: 556
-- name: '[557ms] 🏁RELAY-45.130.125.32-0714'
-  type: trojan
-  server: 45.130.125.32
-  port: 443
-  password: humanity
-  sni: www.calmloud.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 557
-- name: '[561ms] 🏇69@NetFlowTools'
-  type: hysteria2
-  server: 47.131.248.82
-  port: 443
-  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
-  skip-cert-verify: true
-  sni: vpn-sg-001.fastervpn.world
-  delay: 561
-- name: '[563ms] 🏁RELAY-162.159.36.5-0622'
-  type: trojan
-  server: saas.sin.fan
-  port: 443
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  sni: hhcm.hhxaf.cc.cd
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-  delay: 563
-- name: '[565ms] 🇬🇧GB-82.38.31.217-0166'
+  delay: 512
+- name: '[539ms] 🇬🇧GB-82.38.31.217-0166'
   type: ss
   server: 82.38.31.217
   port: 8080
   cipher: chacha20-ietf-poly1305
   password: k1dBOmOB4oqi7Ump37a1bQ
-  delay: 565
-- name: '[567ms] 🇺🇸US-208.103.161.101-0723'
-  type: trojan
-  server: 208.103.161.101
-  port: 443
-  password: humanity
-  sni: www.creationlong.org
-  skip-cert-verify: true
-  udp: true
+  delay: 539
+- name: '[555ms] 巴西圣保罗+CloudFlare节点'
+  type: vless
+  server: 188.114.97.6
+  port: 8443
+  uuid: f3b8c2a1-9d4e-4b7f-a6c5-2e8d1f0b4a93
+  tls: true
   network: ws
+  udp: true
+  servername: srv71.perfectbulk.info
+  client-fingerprint: chrome
   ws-opts:
-    path: /assignment
-  delay: 567
-- name: '[571ms] 🇺🇸US-38.54.80.160-2193'
-  type: ss
-  server: 38.54.80.160
-  port: 16292
-  cipher: chacha20-ietf-poly1305
-  password: r_NRe-+WRq2zVqMpCnJtTESlT8WyffHyFy
-  delay: 571
-- name: '[574ms] 🏁RELAY-91.193.58.77-0656'
-  type: trojan
-  server: 91.193.58.77
-  port: 443
-  password: humanity
-  sni: www.calmloud.com
+    path: /
+    headers:
+      Host: srv71.perfectbulk.info
+  delay: 555
+- name: '[556ms] RO_ccae7_0050'
+  server: 193.176.84.32
+  port: 9002
+  type: http
+  tls: true
   skip-cert-verify: true
   udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 574
-- name: '[580ms] 🇮🇩ID-103.176.78.153-5758'
-  type: trojan
-  server: 103.176.78.153
-  port: 443
-  password: idc117okt
-  sni: 103.176.78.153
+  delay: 556
+- name: '[557ms] RO_ccae7_0048'
+  server: 84.239.14.152
+  port: 9002
+  type: http
+  tls: true
   skip-cert-verify: true
   udp: true
-  delay: 580
-- name: '[592ms] 印度+V2CROSS.COM'
-  type: ss
-  server: 103.111.114.82
-  port: 28061
-  cipher: chacha20-ietf-poly1305
-  password: WOir3lXBhMHDcLFPQdEZXPu37_pTQDCXfm
-  delay: 592
-- name: '[592ms] 🇫🇷FR-51.77.213.197-5483'
-  type: trojan
-  server: 51.77.213.197
-  port: 443
-  password: 973ed2e0-c4d8-4737-a093-71629148086d
-  sni: frt2.sshocean.net
+  delay: 557
+- name: '[558ms] RO_ccae7_0052'
+  server: 193.176.84.37
+  port: 9002
+  type: http
+  tls: true
   skip-cert-verify: true
   udp: true
-  delay: 592
-- name: '[593ms] 🇺🇸 US 14'
-  type: ss
-  server: 15.204.254.187
-  port: 12000
-  cipher: aes-256-gcm
-  password: 8JCsPssfgS8tiRwiMlhARg==
-  delay: 593
-- name: '[606ms] 🇲🇳MN-103.168.56.77-3667'
+  delay: 558
+- name: '[559ms] 🇰🇷KR-123.140.124.25-4246'
   type: trojan
-  server: 103.168.56.77
-  port: 443
-  password: 4f2c305b-9a03-4493-b3e4-2dff2f1af8c9
-  sni: 103.168.56.77
+  server: official.seoulcityhall.com.ua
+  port: 2053
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  sni: official.seoulcityhall.com.ua
   skip-cert-verify: true
   udp: true
-  delay: 606
-- name: '[607ms] 🇰🇷KR-43.203.243.134-6171'
-  type: trojan
-  server: select-marmoset.rooster465.autos
-  port: 443
-  password: IL37892054
-  sni: select-marmoset.rooster465.autos
+  delay: 559
+- name: '[559ms] RO_ccae7_0033'
+  server: 84.239.49.160
+  port: 9002
+  type: http
+  tls: true
   skip-cert-verify: true
   udp: true
-  delay: 607
-- name: '[611ms] 🇲🇩MD-94.131.108.36-6260'
+  delay: 559
+- name: '[563ms] RO_ccae7_0051'
+  server: 193.176.84.31
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 563
+- name: '[568ms] 法國節點'
   type: vmess
-  server: 94.131.108.36
-  port: 443
-  uuid: 9855f1f0-a800-40d4-8b38-c7d3eb79302d
+  server: 69.84.182.49
+  port: 80
+  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
   alterId: 0
   cipher: auto
   tls: false
@@ -2172,92 +1690,42 @@ proxies:
   network: ws
   ws-opts:
     path: /
-  delay: 611
-- name: '[611ms] 🏁RELAY-141.193.213.21-0654'
-  type: trojan
-  server: 141.193.213.21
-  port: 443
-  password: humanity
-  sni: www.calmloud.com
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+  delay: 568
+- name: '[569ms] RO_ccae7_0042'
+  server: 84.239.49.39
+  port: 9002
+  type: http
+  tls: true
   skip-cert-verify: true
   udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 611
-- name: '[618ms] 🏁RELAY-141.193.213.11-0624'
-  type: trojan
-  server: 141.193.213.11
-  port: 443
-  password: humanity
-  sni: www.calmloud.com
+  delay: 569
+- name: '[571ms] RO_ccae7_0026'
+  server: 84.239.49.253
+  port: 9002
+  type: http
+  tls: true
   skip-cert-verify: true
   udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 618
-- name: '[621ms] 🇸🇬SG-188.253.12.94-6237'
-  type: trojan
-  server: 188.253.12.94
-  port: 45553
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: ch.01.naiun.bilibili.com
+  delay: 571
+- name: '[572ms] RO_ccae7_0037'
+  server: 84.239.49.55
+  port: 9002
+  type: http
+  tls: true
   skip-cert-verify: true
   udp: true
-  delay: 621
-- name: '[626ms] 🇸🇬SG-188.253.12.93-6238'
-  type: trojan
-  server: 188.253.12.93
-  port: 41943
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: az.01.naiun.bilibili.com
+  delay: 572
+- name: '[576ms] RO_ccae7_0035'
+  server: 84.239.49.234
+  port: 9002
+  type: http
+  tls: true
   skip-cert-verify: true
   udp: true
-  delay: 626
-- name: '[629ms] 🏁RELAY-45.130.125.96-0668'
-  type: trojan
-  server: 45.130.125.96
-  port: 443
-  password: humanity
-  sni: www.calmloud.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 629
-- name: '[632ms] 🇸🇬SG-188.253.12.99-6239'
-  type: trojan
-  server: 188.253.12.99
-  port: 45553
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: ch.01.naiun.bilibili.com
-  skip-cert-verify: true
-  udp: true
-  delay: 632
-- name: '[634ms] 🇸🇬SG-188.253.12.99-6236'
-  type: trojan
-  server: 188.253.12.99
-  port: 41943
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: az.01.naiun.bilibili.com
-  skip-cert-verify: true
-  udp: true
-  delay: 634
-- name: '[647ms] 🏁RELAY-104.18.152.210-0730'
-  type: trojan
-  server: 104.18.152.210
-  port: 443
-  password: humanity
-  sni: www.ignitelimit.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 647
-- name: '[659ms] 🇩🇪DE-92.119.35.71-0139'
+  delay: 576
+- name: '[581ms] 希腊+V2CROSS.COM'
   type: trojan
   server: 92.119.35.71
   port: 443
@@ -2265,136 +1733,306 @@ proxies:
   sni: 92.119.35.71
   skip-cert-verify: true
   udp: true
-  delay: 659
-- name: '[659ms] 🇰🇷KR-211.178.105.134-0171'
-  type: ss
-  server: 211.178.105.134
-  port: 6123
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  delay: 659
-- name: '[700ms] 🇬🇧GB-82.38.31.15-0067'
-  type: ss
-  server: 82.38.31.15
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: oZIoA69Q8yhcQV8ka3Pa3A
-  delay: 700
-- name: '[701ms] 🇩🇪DE-94.103.173.70-0097'
-  type: trojan
-  server: de-1.hysteria.ltd
-  port: 9443
-  password: LYaEYwjN8LjWTRJdCCTzW7V6gK7atJVu
-  sni: de-1.hysteria.ltd
-  skip-cert-verify: true
-  udp: true
-  delay: 701
-- name: '[701ms] 🇬🇧GB-82.38.31.218-0147'
-  type: ss
-  server: 82.38.31.218
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  delay: 701
-- name: '[717ms] 🇳🇱_NL_荷兰 #2'
-  type: vless
-  server: 87.199.210.215
-  port: 443
-  uuid: def62c86-e2f2-4d13-b1f1-b3c197ed4873
-  tls: true
-  network: ws
-  udp: true
-  ws-opts:
-    path: /
-  delay: 717
-- name: '[719ms] 🇮🇳IN-152.67.8.205-0157'
-  type: vmess
-  server: 152.67.8.205
-  port: 80
-  uuid: 9db4c708-aef8-4359-821b-38e47990be0d
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-  delay: 719
-- name: '[745ms] 🇸🇬SG-213.35.127.18-0674'
-  type: trojan
-  server: 213.35.127.18
-  port: 443
-  password: eeb6823c-b926-4ea2-866a-5542edd26e59
-  sni: hhcm.hhxaf.cc.cd
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-  delay: 745
-- name: '[753ms] RO_19dc2_0025'
-  server: 84.239.49.202
+  delay: 581
+- name: '[583ms] RO_ccae7_0020'
+  server: 84.239.49.154
   port: 9002
   type: http
   tls: true
   skip-cert-verify: true
   udp: true
-  delay: 753
-- name: '[754ms] 🏁RELAY-104.16.174.36-0664'
-  type: trojan
-  server: 104.16.174.36
-  port: 443
-  password: humanity
-  sni: www.ignitelimit.com
+  delay: 583
+- name: '[583ms] RO_ccae7_0032'
+  server: 84.239.49.178
+  port: 9002
+  type: http
+  tls: true
   skip-cert-verify: true
   udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 754
-- name: '[765ms] 🇰🇷KR-123.140.124.24-3906'
-  type: trojan
-  server: official.seoulcitygovernment.com.ua
-  port: 8443
-  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
-  sni: official.seoulcitygovernment.com.ua
+  delay: 583
+- name: '[584ms] RO_ccae7_0030'
+  server: 84.239.49.204
+  port: 9002
+  type: http
+  tls: true
   skip-cert-verify: true
   udp: true
-  delay: 765
-- name: '[765ms] RO_19dc2_0024'
+  delay: 584
+- name: '[586ms] RO_ccae7_0022'
+  server: 84.239.49.227
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 586
+- name: '[586ms] RO_ccae7_0047'
+  server: 84.239.49.235
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 586
+- name: '[586ms] RO_ccae7_0049'
+  server: 84.239.49.219
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 586
+- name: '[587ms] RO_ccae7_0024'
   server: 84.239.49.207
   port: 9002
   type: http
   tls: true
   skip-cert-verify: true
   udp: true
-  delay: 765
-- name: '[767ms] 🇺🇸US-38.60.202.163-0151'
-  type: trojan
-  server: 38.60.202.163
+  delay: 587
+- name: '[588ms] 🇩🇪DE_2|2.1MB/s'
+  type: vless
+  server: 188.114.97.6
   port: 443
-  password: ZfhGKkAmGl.hxRfIUI0LUU.MuK3hkQdxed
-  sni: 38.60.202.163
+  uuid: b8ca14a6-9b54-436f-8822-9c679615372c
+  tls: true
+  network: ws
+  udp: true
+  servername: API.ICR7.IR
+  ws-opts:
+    path: /Mori?ed=1024fp=firefox
+    headers:
+      Host: API.ICR7.IR
+  delay: 588
+- name: '[588ms] RO_ccae7_0025'
+  server: 84.239.49.202
+  port: 9002
+  type: http
+  tls: true
   skip-cert-verify: true
   udp: true
-  delay: 767
-- name: '[769ms] 美国+FDC芝加哥机房'
-  type: vless
-  server: 50.7.177.179
-  port: 443
-  uuid: b8794f67-80d9-4124-8fc5-2d2ce5516573
+  delay: 588
+- name: '[588ms] RO_ccae7_0040'
+  server: 84.239.14.160
+  port: 9002
+  type: http
   tls: true
-  network: tcp
+  skip-cert-verify: true
   udp: true
-  flow: xtls-rprx-vision
-  servername: deepl.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: AYL1z7PNyo6LqYLeZpXa50FnK9eEu7o18KHRhOlST1w
-    short-id: bd72
-  skip-cert-verify: false
-  delay: 769
-- name: '[772ms] 🇺🇸US-38.54.64.247-0146'
+  delay: 588
+- name: '[589ms] RO_ccae7_0044'
+  server: 84.239.49.209
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 589
+- name: '[593ms] RO_ccae7_0045'
+  server: 84.239.49.159
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 593
+- name: '[594ms] RO_ccae7_0021'
+  server: 84.239.14.149
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 594
+- name: '[595ms] RO_ccae7_0038'
+  server: 84.239.49.57
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 595
+- name: '[595ms] RO_ccae7_0043'
+  server: 84.239.49.175
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 595
+- name: '[596ms] RO_ccae7_0018'
+  server: 84.239.49.225
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 596
+- name: '[596ms] RO_ccae7_0027'
+  server: 84.239.49.42
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 596
+- name: '[597ms] RO_ccae7_0019'
+  server: 84.239.14.159
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 597
+- name: '[599ms] RO_ccae7_0034'
+  server: 84.239.49.239
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 599
+- name: '[600ms] 希腊+V2CROSS.COM #3'
+  type: trojan
+  server: 92.119.35.97
+  port: 443
+  password: urhj8z8R8nBovrNsYzXhL35jLGC5ruguRh
+  sni: 92.119.35.97
+  skip-cert-verify: true
+  udp: true
+  delay: 600
+- name: '[603ms] RO_ccae7_0023'
+  server: 84.239.49.191
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 603
+- name: '[603ms] RO_ccae7_0028'
+  server: 84.239.49.196
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 603
+- name: '[603ms] RO_ccae7_0031'
+  server: 84.239.49.157
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 603
+- name: '[604ms] 🇬🇧GB-82.38.31.15-0067'
+  type: ss
+  server: 82.38.31.15
+  port: 443
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  delay: 604
+- name: '[604ms] 🇰🇷KR-43.203.243.134-6171'
+  type: trojan
+  server: select-marmoset.rooster465.autos
+  port: 443
+  password: IL37892054
+  sni: select-marmoset.rooster465.autos
+  skip-cert-verify: true
+  udp: true
+  delay: 604
+- name: '[604ms] RO_ccae7_0039'
+  server: 84.239.49.245
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 604
+- name: '[608ms] RO_ccae7_0041'
+  server: 84.239.49.185
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 608
+- name: '[609ms] RO_ccae7_0017'
+  server: 84.239.49.187
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 609
+- name: '[609ms] RO_ccae7_0036'
+  server: 84.239.49.40
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 609
+- name: '[614ms] RO_ccae7_0029'
+  server: 84.239.49.211
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 614
+- name: '[627ms] RO_ccae7_0046'
+  server: 84.239.49.247
+  port: 9002
+  type: http
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  delay: 627
+- name: '[640ms] 🇺🇸US-38.54.80.160-2193'
+  type: ss
+  server: 38.54.80.160
+  port: 16292
+  cipher: chacha20-ietf-poly1305
+  password: r_NRe-+WRq2zVqMpCnJtTESlT8WyffHyFy
+  delay: 640
+- name: '[643ms] 🇯🇵JP-103.125.216.18-0158'
+  type: trojan
+  server: 103.125.216.18
+  port: 443
+  password: T9qoEuuxUEa9Dk3KxnTWrs6J8ilng9sCIf
+  sni: 103.125.216.18
+  skip-cert-verify: true
+  udp: true
+  delay: 643
+- name: '[643ms] 🇰🇷KR-13.125.84.24-6154'
+  type: trojan
+  server: touching-pigeon.rooster465.autos
+  port: 443
+  password: WF42809561
+  sni: touching-pigeon.rooster465.autos
+  skip-cert-verify: true
+  udp: true
+  delay: 643
+- name: '[645ms] 🇯🇵JP-3.113.25.200-6167'
+  type: trojan
+  server: engaging-toucan.rooster465.autos
+  port: 443
+  password: IL37892054
+  sni: engaging-toucan.rooster465.autos
+  skip-cert-verify: true
+  udp: true
+  delay: 645
+- name: '[648ms] 🇰🇷KR-43.203.230.64-6161'
+  type: trojan
+  server: outgoing-ladybird.rooster465.autos
+  port: 443
+  password: IL37892054
+  sni: outgoing-ladybird.rooster465.autos
+  skip-cert-verify: true
+  udp: true
+  delay: 648
+- name: '[652ms] 美国+华盛顿Cogent通信公司'
   type: trojan
   server: 38.54.64.247
   port: 443
@@ -2402,190 +2040,56 @@ proxies:
   sni: 38.54.64.247
   skip-cert-verify: true
   udp: true
-  delay: 772
-- name: '[773ms] RO_19dc2_0037'
-  server: 84.239.49.55
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 773
-- name: '[776ms] RO_19dc2_0030'
-  server: 84.239.49.204
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 776
-- name: '[776ms] RO_19dc2_0040'
-  server: 84.239.14.160
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 776
-- name: '[782ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #7'
+  delay: 652
+- name: '[654ms] 🇯🇵JP-103.125.216.68-0126'
   type: trojan
-  server: 103.177.136.42
-  port: 45553
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: ch.01.naiun.bilibili.com
+  server: 103.125.216.68
+  port: 443
+  password: T9qoEuuxUEa9Dk3KxnTWrs6J8ilng9sCIf
+  sni: 103.125.216.68
   skip-cert-verify: true
   udp: true
-  delay: 782
-- name: '[782ms] RO_19dc2_0020'
-  server: 84.239.49.154
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 782
-- name: '[783ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #6'
+  delay: 654
+- name: '[659ms] 🇰🇷KR-123.140.124.24-3906'
   type: trojan
-  server: 103.177.136.42
-  port: 45619
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: fr.01.naiun.bilibili.com
+  server: official.seoulcitygovernment.com.ua
+  port: 8443
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  sni: official.seoulcitygovernment.com.ua
   skip-cert-verify: true
   udp: true
-  delay: 783
-- name: '[786ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #5'
+  delay: 659
+- name: '[662ms] 🇯🇵JP-108.160.132.132-0644'
   type: trojan
-  server: 103.177.136.45
-  port: 47909
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: is.01.naiun.bilibili.com
+  server: 108.160.132.132
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: tjsp.hhxaf.cc.cd
   skip-cert-verify: true
   udp: true
-  delay: 786
-- name: '[787ms] RO_19dc2_0019'
-  server: 84.239.14.159
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 787
-- name: '[790ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #12'
+  network: ws
+  ws-opts:
+    path: /
+  delay: 662
+- name: '[665ms] 🇰🇷KR-123.140.124.25-4117'
   type: trojan
-  server: 103.177.136.42
-  port: 46424
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: de.01.naiun.bilibili.com
+  server: official.seoulcityhall.com.ua
+  port: 8443
+  password: 96983eb4-c8f1-316e-ab00-500014ed3d8b
+  sni: official.seoulcityhall.com.ua
   skip-cert-verify: true
   udp: true
-  delay: 790
-- name: '[791ms] RO_19dc2_0031'
-  server: 84.239.49.157
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 791
-- name: '[791ms] RO_19dc2_0035'
-  server: 84.239.49.234
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 791
-- name: '[792ms] RO_19dc2_0027'
-  server: 84.239.49.42
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 792
-- name: '[793ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #9'
+  delay: 665
+- name: '[668ms] 🇸🇬SG-43.160.197.160-6115'
   type: trojan
-  server: 103.177.136.45
-  port: 48697
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: gh.01.naiun.bilibili.com
+  server: 43.160.197.160
+  port: 443
+  password: 38f169d6-d202-4b1b-8db8-e6eb1648f5cf
+  sni: 43.160.197.160
   skip-cert-verify: true
   udp: true
-  delay: 793
-- name: '[794ms] RO_19dc2_0042'
-  server: 84.239.49.39
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 794
-- name: '[795ms] RO_19dc2_0028'
-  server: 84.239.49.196
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 795
-- name: '[798ms] RO_19dc2_0022'
-  server: 84.239.49.227
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 798
-- name: '[798ms] RO_19dc2_0032'
-  server: 84.239.49.178
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 798
-- name: '[801ms] 🇰🇷KR-141.164.45.187-0175'
-  type: ss
-  server: 141.164.45.187
-  port: 6679
-  cipher: aes-256-gcm
-  password: TEzjfAYq2IjtuoS
-  delay: 801
-- name: '[802ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #8'
-  type: trojan
-  server: 103.177.136.42
-  port: 48697
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: gh.01.naiun.bilibili.com
-  skip-cert-verify: true
-  udp: true
-  delay: 802
-- name: '[806ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #10'
-  type: trojan
-  server: 103.177.136.45
-  port: 45553
-  password: 4f4d1167-ef14-4304-9bce-0740472503ef
-  sni: ch.01.naiun.bilibili.com
-  skip-cert-verify: true
-  udp: true
-  delay: 806
-- name: '[810ms] RO_19dc2_0034'
-  server: 84.239.49.239
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 810
-- name: '[811ms] RO_19dc2_0050'
-  server: 193.176.84.32
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 811
-- name: '[814ms] 美国 CloudFlare节点'
+  delay: 668
+- name: '[670ms] 🇺🇸 美国 CloudFlare节点 #2'
   type: vmess
   server: hl112.cowjump.site
   port: 443
@@ -2600,139 +2104,203 @@ proxies:
     headers:
       Host: hl112.cowjump.site
   servername: hl112.cowjump.site
-  delay: 814
-- name: '[814ms] RO_19dc2_0026'
-  server: 84.239.49.253
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 814
-- name: '[815ms] RO_19dc2_0044'
-  server: 84.239.49.209
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 815
-- name: '[816ms] 🇰🇷KR-221.139.79.57-0177'
-  type: ss
-  server: 221.139.79.57
-  port: 13979
-  cipher: aes-256-cfb
-  password: qwerREWQ@@
-  delay: 816
-- name: '[817ms] RO_19dc2_0048'
-  server: 84.239.14.152
-  port: 9002
-  type: http
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  delay: 817
-- name: '[818ms] 🏁RELAY-104.18.152.204-0671'
+  delay: 670
+- name: '[672ms] 🇯🇵JP-64.176.36.61-6200'
   type: trojan
-  server: 104.18.152.204
+  server: 64.176.36.61
   port: 443
-  password: humanity
-  sni: www.ignitelimit.com
+  password: 8r<[9'l6hAO#8ZQi
+  sni: 64.176.36.61
+  skip-cert-verify: true
+  udp: true
+  delay: 672
+- name: '[675ms] 🇬🇧GB-82.38.31.216-0145'
+  type: ss
+  server: 82.38.31.216
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  delay: 675
+- name: '[675ms] 🇸🇬SG-18.140.67.76-6643'
+  type: trojan
+  server: 18.140.67.76
+  port: 443
+  password: iyinglong
+  sni: 18.140.67.76
+  skip-cert-verify: true
+  udp: true
+  delay: 675
+- name: '[678ms] 🇰🇷KR-3.34.143.133-6176'
+  type: trojan
+  server: growing-tuna.rooster465.autos
+  port: 443
+  password: IL37892054
+  sni: growing-tuna.rooster465.autos
+  skip-cert-verify: true
+  udp: true
+  delay: 678
+- name: '[681ms] 🏇69@NetFlowTools'
+  type: hysteria2
+  server: 47.131.248.82
+  port: 443
+  password: qQe1z5kU8kN6SlKnDt9Ru3Qp
+  skip-cert-verify: true
+  sni: vpn-sg-001.fastervpn.world
+  delay: 681
+- name: '[693ms] 🇺🇸 美国 华盛顿Cogent通信公司'
+  type: trojan
+  server: 38.60.168.129
+  port: 443
+  password: Lw_DP4+W.J5K33MD2Jy5zQVuT5n71+=BcD
+  sni: 38.60.168.129
+  skip-cert-verify: true
+  udp: true
+  delay: 693
+- name: '[696ms] 🇯🇵JP-64.176.36.17-0713'
+  type: trojan
+  server: 64.176.36.17
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: tjsp.hhxaf.cc.cd
   skip-cert-verify: true
   udp: true
   network: ws
   ws-opts:
-    path: /assignment
-  delay: 818
-- name: '[818ms] RO_19dc2_0036'
-  server: 84.239.49.40
-  port: 9002
-  type: http
-  tls: true
+    path: /
+  delay: 696
+- name: '[700ms] 🇸🇬SG-5.180.78.22-6180'
+  type: trojan
+  server: 5.180.78.22
+  port: 443
+  password: d30ab83dbde4480082048fb315bedebd
+  sni: 5.180.78.22
   skip-cert-verify: true
   udp: true
-  delay: 818
-- name: '[818ms] RO_19dc2_0047'
-  server: 84.239.49.235
-  port: 9002
-  type: http
-  tls: true
+  delay: 700
+- name: '[704ms] 🏁RELAY-162.159.36.5-0622'
+  type: trojan
+  server: saas.sin.fan
+  port: 443
+  password: eeb6823c-b926-4ea2-866a-5542edd26e59
+  sni: hhcm.hhxaf.cc.cd
   skip-cert-verify: true
   udp: true
-  delay: 818
-- name: '[819ms] RO_19dc2_0045'
-  server: 84.239.49.159
-  port: 9002
-  type: http
-  tls: true
+  network: ws
+  ws-opts:
+    path: /
+  delay: 704
+- name: '[715ms] 🇮🇩ID-103.176.78.153-5758'
+  type: trojan
+  server: 103.176.78.153
+  port: 443
+  password: idc117okt
+  sni: 103.176.78.153
   skip-cert-verify: true
   udp: true
-  delay: 819
-- name: '[825ms] RO_19dc2_0033'
-  server: 84.239.49.160
-  port: 9002
-  type: http
-  tls: true
+  delay: 715
+- name: '[716ms] 🇰🇷KR-141.164.45.187-0204'
+  type: ss
+  server: 141.164.45.187
+  port: 7001
+  cipher: aes-256-gcm
+  password: RexnBgU7EV5ADxG
+  delay: 716
+- name: '[726ms] 🇰🇷KR-38.60.220.65-0154'
+  type: trojan
+  server: 38.60.220.65
+  port: 443
+  password: t5FsyeQXkNCY6eVGiqBXmPu4..jBEpNbak
+  sni: 38.60.220.65
   skip-cert-verify: true
   udp: true
-  delay: 825
-- name: '[826ms] RO_19dc2_0038'
-  server: 84.239.49.57
-  port: 9002
-  type: http
-  tls: true
+  delay: 726
+- name: '[749ms] 🇲🇳MN-103.168.56.77-3667'
+  type: trojan
+  server: 103.168.56.77
+  port: 443
+  password: 4f2c305b-9a03-4493-b3e4-2dff2f1af8c9
+  sni: 103.168.56.77
   skip-cert-verify: true
   udp: true
-  delay: 826
-- name: '[827ms] RO_19dc2_0017'
-  server: 84.239.49.187
-  port: 9002
-  type: http
-  tls: true
+  delay: 749
+- name: '[754ms] 🇬🇧GB-82.38.31.7-0164'
+  type: ss
+  server: 82.38.31.7
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  delay: 754
+- name: '[757ms] 🇸🇬SG-188.253.12.94-6237'
+  type: trojan
+  server: 188.253.12.94
+  port: 45553
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: ch.01.naiun.bilibili.com
   skip-cert-verify: true
   udp: true
-  delay: 827
-- name: '[829ms] RO_19dc2_0029'
-  server: 84.239.49.211
-  port: 9002
-  type: http
-  tls: true
+  delay: 757
+- name: '[757ms] 🇸🇬SG-188.253.12.99-6239'
+  type: trojan
+  server: 188.253.12.99
+  port: 45553
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: ch.01.naiun.bilibili.com
   skip-cert-verify: true
   udp: true
-  delay: 829
-- name: '[833ms] RO_19dc2_0046'
-  server: 84.239.49.247
-  port: 9002
-  type: http
-  tls: true
+  delay: 757
+- name: '[759ms] 🇬🇧GB-82.38.31.10-0167'
+  type: ss
+  server: 82.38.31.10
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  delay: 759
+- name: '[759ms] 🇸🇬SG-188.253.12.93-6238'
+  type: trojan
+  server: 188.253.12.93
+  port: 41943
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: az.01.naiun.bilibili.com
   skip-cert-verify: true
   udp: true
-  delay: 833
-- name: '[837ms] RO_19dc2_0021'
-  server: 84.239.14.149
-  port: 9002
-  type: http
-  tls: true
+  delay: 759
+- name: '[765ms] 🇸🇬SG-188.253.12.99-6236'
+  type: trojan
+  server: 188.253.12.99
+  port: 41943
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: az.01.naiun.bilibili.com
   skip-cert-verify: true
   udp: true
-  delay: 837
-- name: '[839ms] RO_19dc2_0051'
-  server: 193.176.84.31
-  port: 9002
-  type: http
-  tls: true
+  delay: 765
+- name: '[767ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #7'
+  type: trojan
+  server: 103.177.136.42
+  port: 45553
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: ch.01.naiun.bilibili.com
   skip-cert-verify: true
   udp: true
-  delay: 839
-- name: '[841ms] RO_19dc2_0018'
-  server: 84.239.49.225
-  port: 9002
-  type: http
-  tls: true
+  delay: 767
+- name: '[768ms] 🇰🇷KR-3.38.255.122-6170'
+  type: trojan
+  server: glowing-deer.rooster465.autos
+  port: 443
+  password: ZY07256934
+  sni: glowing-deer.rooster465.autos
   skip-cert-verify: true
   udp: true
-  delay: 841
-- name: '[842ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #11'
+  delay: 768
+- name: '[775ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #6'
+  type: trojan
+  server: 103.177.136.42
+  port: 45619
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: fr.01.naiun.bilibili.com
+  skip-cert-verify: true
+  udp: true
+  delay: 775
+- name: '[776ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #11'
   type: trojan
   server: 103.177.136.42
   port: 47909
@@ -2740,56 +2308,217 @@ proxies:
   sni: is.01.naiun.bilibili.com
   skip-cert-verify: true
   udp: true
-  delay: 842
-- name: '[843ms] RO_19dc2_0052'
-  server: 193.176.84.37
-  port: 9002
-  type: http
-  tls: true
+  delay: 776
+- name: '[778ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #9'
+  type: trojan
+  server: 103.177.136.45
+  port: 48697
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: gh.01.naiun.bilibili.com
   skip-cert-verify: true
   udp: true
-  delay: 843
-- name: '[844ms] RO_19dc2_0041'
-  server: 84.239.49.185
-  port: 9002
-  type: http
-  tls: true
+  delay: 778
+- name: '[780ms] 🇰🇷KR-218.237.185.230-0173'
+  type: ss
+  server: p141.panda001.net
+  port: 4652
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  delay: 780
+- name: '[782ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #5'
+  type: trojan
+  server: 103.177.136.45
+  port: 47909
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: is.01.naiun.bilibili.com
   skip-cert-verify: true
   udp: true
-  delay: 844
-- name: '[850ms] RO_19dc2_0039'
-  server: 84.239.49.245
-  port: 9002
-  type: http
-  tls: true
+  delay: 782
+- name: '[791ms] 🇸🇬SG-54.169.245.181-6117'
+  type: trojan
+  server: engaged-ram.rooster465.autos
+  port: 443
+  password: IL37892054
+  sni: engaged-ram.rooster465.autos
   skip-cert-verify: true
   udp: true
-  delay: 850
-- name: '[852ms] RO_19dc2_0049'
-  server: 84.239.49.219
-  port: 9002
-  type: http
-  tls: true
+  delay: 791
+- name: '[798ms] 🇯🇵JP-52.195.12.80-6155'
+  type: trojan
+  server: upright-rhino.rooster465.autos
+  port: 443
+  password: IL37892054
+  sni: upright-rhino.rooster465.autos
   skip-cert-verify: true
   udp: true
-  delay: 852
-- name: '[860ms] RO_19dc2_0043'
-  server: 84.239.49.175
-  port: 9002
-  type: http
-  tls: true
+  delay: 798
+- name: '[806ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #10'
+  type: trojan
+  server: 103.177.136.45
+  port: 45553
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: ch.01.naiun.bilibili.com
   skip-cert-verify: true
   udp: true
-  delay: 860
-- name: '[864ms] RO_19dc2_0023'
-  server: 84.239.49.191
-  port: 9002
-  type: http
-  tls: true
+  delay: 806
+- name: '[821ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #8'
+  type: trojan
+  server: 103.177.136.42
+  port: 48697
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: gh.01.naiun.bilibili.com
   skip-cert-verify: true
   udp: true
-  delay: 864
-- name: '[870ms] 🏁RELAY-104.18.152.175-2446'
+  delay: 821
+- name: '[822ms] 🏁RELAY-104.19.208.184-0666'
+  type: trojan
+  server: 104.19.208.184
+  port: 443
+  password: humanity
+  sni: www.multiplydose.com
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+    path: /assignment
+  delay: 822
+- name: '[836ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #12'
+  type: trojan
+  server: 103.177.136.42
+  port: 46424
+  password: 4f4d1167-ef14-4304-9bce-0740472503ef
+  sni: de.01.naiun.bilibili.com
+  skip-cert-verify: true
+  udp: true
+  delay: 836
+- name: '[846ms] ✅  @vistav2ray  👈👈کانال ما ✅ #1'
+  type: hysteria2
+  server: 80.66.81.78
+  port: 9443
+  password: rs2mR3g9bZiMloftx6lZQ59Um1Ld
+  skip-cert-verify: true
+  sni: tunel1.washing.help
+  obfs: salamander
+  obfs-password: oMgvuBy5Lj5kYM57sGsnjpjNcSEQ
+  delay: 846
+- name: '[875ms] 🇰🇷_KR_韩国'
+  type: hysteria2
+  server: hg.baiyi.cloudns.org
+  port: 36603
+  password: 555e6448-d1e0-465d-8ee0-b56aad452e32
+  skip-cert-verify: true
+  sni: hg.baiyi.cloudns.org
+  delay: 875
+- name: '[904ms] 🇮🇳 印度 V2CROSS.COM'
+  type: ss
+  server: 103.111.114.82
+  port: 28061
+  cipher: chacha20-ietf-poly1305
+  password: WOir3lXBhMHDcLFPQdEZXPu37_pTQDCXfm
+  delay: 904
+- name: '[973ms] 🇸🇬_SG_新加坡'
+  type: hysteria2
+  server: sg.baiyi.cloudns.org
+  port: 29766
+  password: 2014edec-53f7-43db-a39a-4bf33674ca24
+  skip-cert-verify: true
+  sni: sg.baiyi.cloudns.org
+  delay: 973
+- name: '[994ms] 🇺🇸_US_美国'
+  type: hysteria2
+  server: mg.baiyi.cloudns.org
+  port: 34604
+  password: 12475dcd-6fc9-4a40-8d84-b34d58d8114a
+  skip-cert-verify: true
+  sni: mg.baiyi.cloudns.org
+  delay: 994
+- name: '[1016ms] @prrofile_purple  ♥️👈 تلگرام #1'
+  type: hysteria2
+  server: 130.49.161.70
+  port: 443
+  password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
+  skip-cert-verify: true
+  sni: hy2.aspidnet.xyz
+  obfs: salamander
+  obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
+  delay: 1016
+- name: '[1020ms] 🇬🇧GB-82.38.31.187-0086'
+  type: ss
+  server: 82.38.31.187
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  delay: 1020
+- name: '[1086ms] 🇬🇧GB-82.38.31.186-0090'
+  type: ss
+  server: 82.38.31.186
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  delay: 1086
+- name: '[1266ms] 🇨🇦CA-158.51.121.63-1221'
+  type: vmess
+  server: 158.51.121.63
+  port: 443
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: linkvws
+    headers:
+      Host: seribus.org
+  servername: seribus.org
+  delay: 1266
+- name: '[1358ms] 🇳🇱NL-194.124.216.187-6203'
+  type: trojan
+  server: nl-4.tr202512.com
+  port: 443
+  password: M08tvzYWtUEJNtbpHp
+  sni: nl-4.tr202512.com
+  skip-cert-verify: true
+  udp: true
+  delay: 1358
+- name: '[1377ms] 🇰🇷KR-141.164.45.187-0175'
+  type: ss
+  server: 141.164.45.187
+  port: 6679
+  cipher: aes-256-gcm
+  password: TEzjfAYq2IjtuoS
+  delay: 1377
+- name: '[1514ms] 🇮🇩ID-130.94.94.15-0170'
+  type: trojan
+  server: 130.94.94.15
+  port: 443
+  password: tUtK5TKdjxsPnOyritLtv8OQWHAK8f8yNR
+  sni: 130.94.94.15
+  skip-cert-verify: true
+  udp: true
+  delay: 1514
+- name: '[1552ms] 🇰🇷KR-221.139.79.57-0177'
+  type: ss
+  server: 221.139.79.57
+  port: 13979
+  cipher: aes-256-cfb
+  password: qwerREWQ@@
+  delay: 1552
+- name: '[1614ms] 🇬🇧GB-82.38.31.205-0076'
+  type: ss
+  server: 82.38.31.205
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: k1dBOmOB4oqi7Ump37a1bQ
+  delay: 1614
+- name: '[1695ms] 🇳🇱NL-108.181.126.122-0104'
+  type: ss
+  server: 108.181.126.122
+  port: 8388
+  cipher: chacha20-ietf-poly1305
+  password: CJmTCCx7Ltud
+  delay: 1695
+- name: '[1724ms] 🏁RELAY-104.18.152.175-2446'
   type: trojan
   server: 104.18.152.175
   port: 443
@@ -2800,222 +2529,22 @@ proxies:
   network: ws
   ws-opts:
     path: /assignment
-  delay: 870
-- name: '[913ms] 🏁RELAY-104.18.152.208-0675'
-  type: trojan
-  server: 104.18.152.208
-  port: 443
-  password: humanity
-  sni: www.ignitelimit.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 913
-- name: '[985ms] 美国+CloudFlare节点'
-  type: trojan
-  server: 104.16.174.6
-  port: 443
-  password: humanity
-  sni: www.ignitelimit.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.ignitelimit.com
-  delay: 985
-- name: '[993ms] 🇷🇺 RU俄罗斯(mibei77.com 米贝节点分享) #3'
+  delay: 1724
+- name: '[1824ms] 🇬🇧GB-82.38.31.155-0092'
   type: ss
-  server: 212.192.13.91
-  port: 30129
-  cipher: aes-256-gcm
-  password: 7e1dd4c55bf85da5
-  delay: 993
-- name: '[1001ms] 法國節點'
-  type: vmess
-  server: 69.84.182.49
-  port: 80
-  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
-  alterId: 0
-  cipher: auto
-  tls: false
-  skip-cert-verify: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
-  delay: 1001
-- name: '[1110ms] ✅  @vistav2ray  👈👈کانال ما ✅ #1'
-  type: hysteria2
-  server: 80.66.81.78
-  port: 9443
-  password: rs2mR3g9bZiMloftx6lZQ59Um1Ld
-  skip-cert-verify: true
-  sni: tunel1.washing.help
-  obfs: salamander
-  obfs-password: oMgvuBy5Lj5kYM57sGsnjpjNcSEQ
-  delay: 1110
-- name: '[1124ms] 🏁RELAY-188.114.98.0-0670'
-  type: trojan
-  server: 188.114.98.0
-  port: 443
-  password: humanity
-  sni: www.creationlong.org
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 1124
-- name: '[1138ms] 🇺🇸US-216.105.168.18-0188'
-  type: ss
-  server: 216.105.168.18
-  port: 443
-  cipher: chacha20-ietf-poly1305
-  password: hCCWOcIsK5wrFz4OX70rWf
-  delay: 1138
-- name: '[1152ms] @prrofile_purple  ♥️👈 تلگرام #1'
-  type: hysteria2
-  server: 130.49.161.70
-  port: 443
-  password: p7Q76LzlnS4hIzr1W3staBOnUe_WwSkR
-  skip-cert-verify: true
-  sni: hy2.aspidnet.xyz
-  obfs: salamander
-  obfs-password: rG07s3COMIEvdnQipRyWzx_H_2xygNC3
-  delay: 1152
-- name: '[1159ms] 🏁RELAY-104.17.131.88-0724'
-  type: trojan
-  server: 104.17.131.88
-  port: 443
-  password: humanity
-  sni: www.gossipglove.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 1159
-- name: '[1189ms] 🏁RELAY-104.16.174.44-0722'
-  type: trojan
-  server: 104.16.174.44
-  port: 443
-  password: humanity
-  sni: www.ignitelimit.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 1189
-- name: '[1274ms] 🏁RELAY-104.18.152.219-0672'
-  type: trojan
-  server: 104.18.152.219
-  port: 443
-  password: humanity
-  sni: www.ignitelimit.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 1274
-- name: '[1362ms] 🇰🇷KR-141.164.45.187-0204'
-  type: ss
-  server: 141.164.45.187
-  port: 7001
-  cipher: aes-256-gcm
-  password: RexnBgU7EV5ADxG
-  delay: 1362
-- name: '[1401ms] 🇬🇧GB-82.38.31.208-0072'
-  type: ss
-  server: 82.38.31.208
+  server: 82.38.31.155
   port: 8080
   cipher: chacha20-ietf-poly1305
-  password: k1dBOmOB4oqi7Ump37a1bQ
-  delay: 1401
-- name: '[1433ms] 🏁RELAY-104.18.152.187-0676'
-  type: trojan
-  server: 104.18.152.187
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  delay: 1824
+- name: '[1921ms] 🇸🇬_SG_新加坡 #2'
+  type: hysteria2
+  server: vpn-sg-003.fastervpn.world
   port: 443
-  password: humanity
-  sni: www.ignitelimit.com
+  password: H7mP2xY9kJ4nQ8wR5tF6vB3z
   skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 1433
-- name: '[1454ms] 🇩🇪 DE 12'
-  type: trojan
-  server: 185.137.157.156
-  port: 443
-  password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
-  sni: 185.137.157.156
-  skip-cert-verify: true
-  udp: true
-  delay: 1454
-- name: '[1471ms] 🇩🇪 DE 19'
-  type: trojan
-  server: 185.137.157.140
-  port: 443
-  password: dh-Ws-YoJIgTYLZ-A5VljeduVse-vhDl7Q
-  sni: 185.137.157.140
-  skip-cert-verify: true
-  udp: true
-  delay: 1471
-- name: '[1541ms] 🏁RELAY-45.130.125.75-0718'
-  type: trojan
-  server: 45.130.125.75
-  port: 443
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 1541
-- name: '[1544ms] 🇦🇹AT-212.183.88.136-0715'
-  type: trojan
-  server: 212.183.88.136
-  port: 443
-  password: humanity
-  sni: www.calmlunch.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 1544
-- name: '[1758ms] 🏁RELAY-104.18.152.225-0673'
-  type: trojan
-  server: 104.18.152.225
-  port: 443
-  password: humanity
-  sni: www.ignitelimit.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 1758
-- name: '[1794ms] 🏁RELAY-104.16.174.46-0669'
-  type: trojan
-  server: 104.16.174.46
-  port: 443
-  password: humanity
-  sni: www.ignitelimit.com
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-    path: /assignment
-  delay: 1794
+  sni: vpn-sg-003.fastervpn.world
+  delay: 1921
 proxy-groups:
 - name: 🚀 选择代理
   type: select
@@ -3029,308 +2558,272 @@ proxy-groups:
   url: https://www.google.com/
   interval: 300
   proxies: &id001
-  - '[18ms] 🇺🇸US-108.181.0.177-0085'
-  - '[22ms] 🇨🇦CA-108.181.118.10-0084'
-  - '[31ms] 🇺🇸US-173.244.56.9-0087'
-  - '[32ms] 🇺🇸US-173.244.56.6-0089'
-  - '[35ms] 美國'
-  - '[35ms] 美國節點 #3'
-  - '[35ms] 🇺🇸US-77.247.126.137-6157'
-  - '[36ms] 美國節點'
-  - '[51ms] 🇩🇪DE_3|2.1MB/s'
-  - '[53ms] 🇯🇵JP_3|3.2MB/s'
-  - '[53ms] 🇺🇸US-156.146.38.170-0080'
-  - '[53ms] 🇺🇸US-156.146.38.167-0068'
-  - '[54ms] 🇸🇬SG_23|3.8MB/s'
-  - '[54ms] 🏁RELAY-104.16.72.101-0619'
-  - '[56ms] 🇸🇬SG_3|3.5MB/s'
-  - '[56ms] 🇯🇵JP_2|2.7MB/s'
-  - '[56ms] 🇸🇬SG_6|3.3MB/s'
-  - '[56ms] 🇺🇸US_6|2.5MB/s'
-  - '[56ms] 🇺🇸US-156.146.38.169-0081'
-  - '[56ms] 🇺🇸US-156.146.38.168-0083'
-  - '[57ms] 🇸🇬SG_8|3.3MB/s'
-  - '[57ms] 🇸🇬SG_11|2.1MB/s'
-  - '[57ms] 🇩🇪DE_1|3.4MB/s'
-  - '[58ms] 🇸🇬SG_22|2.5MB/s'
-  - '[58ms] 🇸🇬SG_24|4.5MB/s'
-  - '[58ms] 🇸🇬SG_28|2.9MB/s'
-  - '[58ms] 🇸🇬SG_30|3.7MB/s'
-  - '[59ms] 🇸🇬SG_13|2.8MB/s'
-  - '[59ms] 🇸🇬SG_19|3.6MB/s'
-  - '[60ms] 🇸🇬SG_17|3.4MB/s'
-  - '[60ms] 🇯🇵JP_6|2.4MB/s'
-  - '[61ms] 🇸🇬SG_7|5.0MB/s'
-  - '[61ms] 🇸🇬SG_20|3.4MB/s'
-  - '[61ms] 🇯🇵JP_4|3.8MB/s'
-  - '[62ms] 🇸🇬SG_21|3.8MB/s'
-  - '[62ms] 🇸🇬SG_27|2.2MB/s'
-  - '[62ms] 🇯🇵JP_7|1.7MB/s'
-  - '[62ms] 🏁RELAY-104.18.42.163-0623'
-  - '[63ms] 🇸🇬SG_5|2.7MB/s'
-  - '[64ms] 🇸🇬SG_10|1.8MB/s'
-  - '[64ms] 🇸🇬SG_25|2.5MB/s'
-  - '[65ms] 🏁RELAY-141.193.213.30-0709'
-  - '[66ms] 🇯🇵JP_5|2.5MB/s'
-  - '[67ms] 🇸🇬SG_18|1.6MB/s'
-  - '[67ms] 🇸🇬SG_29|3.5MB/s'
-  - '[69ms] 🇸🇬SG_4|3.3MB/s'
-  - '[69ms] 🇸🇬SG_12|3.4MB/s'
-  - '[69ms] 🇸🇬SG_16|3.9MB/s'
-  - '[70ms] 🇸🇬SG_14|2.6MB/s'
-  - '[70ms] 🇸🇬SG_31|2.7MB/s'
-  - '[70ms] 美国+CloudFlare节点 #3'
-  - '[70ms] 🏁RELAY-104.16.72.70-0653'
-  - '[72ms] 🇸🇬SG_15|3.6MB/s'
-  - '[72ms] 🏁RELAY-162.159.36.20-0621'
-  - '[73ms] 🇯🇵JP_9|2.8MB/s'
-  - '[73ms] 🏁RELAY-188.164.248.122-0708'
-  - '[76ms] 🇺🇸US-154.64.235.157-0716'
-  - '[77ms] 🇸🇬SG_26|3.5MB/s'
-  - '[86ms] 🇸🇬SG_9|3.5MB/s'
-  - '[95ms] 🇺🇸US_5|3.2MB/s'
-  - '[95ms] 🇨🇦CA-149.22.95.183-0091'
-  - '[100ms] 🇯🇵JP_8|3.7MB/s'
-  - '[103ms] 🇸🇬SG_2|3.6MB/s'
-  - '[104ms] 🇺🇸US-64.94.95.118-6199'
-  - '[109ms] 🇺🇸US-207.180.29.179-0626'
-  - '[115ms] AE_speednode_0001'
-  - '[118ms] 🏁RELAY-104.18.42.163-0642'
-  - '[119ms] 🏁RELAY-172.64.147.104-0711'
-  - '[133ms] 🇺🇸US-37.19.198.236-0063'
-  - '[134ms] 🇺🇸US-37.19.198.160-0066'
-  - '[137ms] 🇺🇸US-37.19.198.243-0077'
-  - '[138ms] NL_speednode_0016'
-  - '[139ms] 🇺🇸US-37.19.198.244-0071'
-  - '[140ms] 🇺🇸US-23.227.193.173-6198'
-  - '[144ms] GB_speednode_0005'
-  - '[159ms] 🇨🇦CA-137.184.174.93-0198'
-  - '[163ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #4'
-  - '[167ms] 🇨🇦 CA 3'
-  - '[169ms] 🇺🇸US-54.184.22.123-6178'
-  - '[173ms] 🇨🇦CA-45.154.204.13-0141'
-  - '[182ms] 美国+CloudFlare节点 #4'
-  - '[205ms] 🇺🇸US-194.33.45.157-6158'
-  - '[220ms] 🇯🇵JP-149.22.87.240-0113'
-  - '[222ms] 🇯🇵JP-149.22.87.241-0110'
-  - '[228ms] 🇯🇵JP-47.79.144.115-0181'
-  - '[235ms] 🇯🇵JP-149.22.87.204-0111'
-  - '[268ms] 🇬🇧 GB 1'
-  - '[280ms] 🇬🇧GB-146.70.61.37-0093'
-  - '[281ms] 🇳🇱NL-158.173.20.171-0095'
-  - '[283ms] 🇳🇱NL-109.201.152.181-0127'
-  - '[284ms] 澳大利亚+新南威尔士州悉尼Choopa数据中心'
-  - '[285ms] 🇦🇺 AU 1'
-  - '[293ms] 🇬🇧GB-141.98.101.178-0120'
-  - '[297ms] 🇩🇪DE-8.209.74.72-0098'
-  - '[298ms] 🇩🇪DE-213.202.208.199-0172'
-  - '[302ms] 🇬🇧GB-141.98.101.181-0109'
-  - '[302ms] 🇬🇧GB-82.38.31.214-0165'
-  - '[303ms] 🇬🇧GB-141.98.101.182-0128'
-  - '[304ms] 🇬🇧GB-82.38.31.192-0064'
-  - '[306ms] 🇳🇱NL-193.29.139.151-0078'
-  - '[306ms] 🇬🇧GB-82.38.31.2-0159'
-  - '[307ms] 🇬🇧GB-82.38.31.194-0161'
-  - '[307ms] 🇬🇧GB-141.98.101.179-0129'
-  - '[308ms] 🇬🇧GB-82.38.31.205-0076'
-  - '[308ms] 🇬🇧GB-82.38.31.202-0073'
-  - '[308ms] 🇳🇱NL-193.29.139.235-0070'
-  - '[309ms] 🇩🇪DE-209.46.102.22-0094'
-  - '[310ms] 🇬🇧GB-82.38.31.210-0082'
-  - '[310ms] 🇬🇧GB-82.38.31.191-0074'
-  - '[312ms] 🇨🇦CA-23.162.200.227-8009'
-  - '[313ms] 🇬🇧GB-94.156.250.148-0124'
-  - '[313ms] 🇳🇱NL-193.29.139.204-0065'
-  - '[314ms] 🇬🇧GB-82.38.31.149-0075'
-  - '[321ms] 荷兰+V2CROSS.COM'
-  - '[323ms] 🇮🇹IT-103.241.66.76-0116'
-  - '[327ms] 🇧🇷BR-38.180.221.143-0115'
-  - '[329ms] 🇬🇧GB-82.38.31.199-0156'
-  - '[332ms] 🇳🇱 NL 2'
-  - '[335ms] 🇬🇧GB-82.38.31.176-0168'
-  - '[346ms] 🇩🇪DE-5.230.184.16-0096'
-  - '[347ms] 🏇63@NetFlowTools'
-  - '[351ms] 🇯🇵JP-140.83.51.161-1328'
-  - '[361ms] 新加坡+Choopa数据中心'
-  - '[365ms] 🇫🇮FI-193.47.60.186-0100'
-  - '[369ms] 🇮🇪IE-146.70.90.197-6153'
-  - '[375ms] 🇰🇷KR-218.237.185.230-0174'
-  - '[382ms] 🇮🇪 IE 2'
-  - '[393ms] 🇳🇱NL-194.124.216.192-6205'
-  - '[394ms] 🇸🇬 SG 2'
-  - '[404ms] 🇬🇧GB-132.145.51.172-4124'
-  - '[407ms] 🇳🇱NL-51.158.146.183-9165'
-  - '[409ms] 🇩🇪 DE德国(mibei77.com 米贝节点分享) #2'
-  - '[409ms] 🇬🇧GB-185.44.76.188-5763'
-  - '[418ms] 美国+CloudFlare节点 #5'
-  - '[418ms] 🇰🇷KR-3.38.255.122-6170'
-  - '[419ms] 🇩🇪DE-92.119.35.131-0137'
-  - '[422ms] 🇩🇪DE-185.137.157.250-0134'
-  - '[422ms] 🇩🇪DE-92.119.35.123-0106'
-  - '[423ms] 🇩🇪DE-92.119.35.117-0105'
-  - '[424ms] 🇩🇪 DE 11'
-  - '[426ms] 🇯🇵JP-103.125.216.68-0126'
-  - '[427ms] 🇰🇷KR-123.140.124.25-4246'
-  - '[428ms] 🇳🇱NL-194.124.216.109-6204'
-  - '[430ms] 🇩🇪DE-92.119.35.97-0132'
-  - '[432ms] 🇩🇪DE-185.137.157.59-0189'
-  - '[433ms] 🇰🇷KR-13.125.84.24-6154'
-  - '[433ms] 🇩🇪 DE 3'
-  - '[438ms] 🇰🇷KR-3.34.143.133-6176'
-  - '[440ms] 罗马尼亚+V2CROSS.COM'
-  - '[440ms] 🇬🇧GB-82.38.31.219-0150'
-  - '[441ms] 🇩🇪DE-185.137.157.154-0133'
-  - '[442ms] 🇯🇵JP-52.195.12.80-6155'
-  - '[443ms] 🇩🇪 DE 13'
-  - '[444ms] 🇩🇪DE-92.119.35.127-0103'
-  - '[445ms] 🇩🇪DE-92.119.35.87-0131'
-  - '[447ms] 🇩🇪DE-92.119.35.93-0138'
-  - '[449ms] 🇩🇪DE-92.119.35.105-0136'
-  - '[450ms] 🇫🇷FR-51.38.99.96-2890'
-  - '[456ms] 罗马尼亚+V2CROSS.COM #2'
-  - '[457ms] 🇯🇵JP-108.160.132.132-0644'
-  - '[459ms] 🇯🇵JP_10|1.6MB/s'
-  - '[460ms] 🇩🇪DE-92.119.35.120-0102'
-  - '[461ms] 🇯🇵JP_11|1.6MB/s'
-  - '[463ms] 🇯🇵JP-64.176.36.61-6200'
-  - '[469ms] 🇳🇱NL-194.124.216.187-6203'
-  - '[470ms] 🇦🇹AT-185.126.236.44-2106'
-  - '[471ms] 🇩🇪 DE 17'
-  - '[474ms] 🇯🇵JP-3.113.25.200-6167'
-  - '[478ms] 🇯🇵JP_1|2.6MB/s'
-  - '[485ms] 🇯🇵JP-64.176.36.17-0713'
-  - '[493ms] 🇬🇧GB-82.38.31.216-0145'
-  - '[502ms] 🏁RELAY-45.130.125.126-0651'
-  - '[502ms] 🏁RELAY-104.17.121.43-0660'
-  - '[504ms] 🏁RELAY-104.19.229.21-0721'
-  - '[510ms] 🏁RELAY-172.64.152.23-0712'
-  - '[512ms] 🏁RELAY-185.18.250.245-0677'
-  - '[515ms] 🏁RELAY-172.66.44.211-0647'
-  - '[516ms] 🏁RELAY-8.6.112.0-0659'
-  - '[520ms] 🏁RELAY-172.64.147.166-0727'
-  - '[522ms] 🏁RELAY-104.21.40.34-0648'
-  - '[524ms] 🇯🇵JP-103.125.216.18-0158'
-  - '[525ms] 🏁RELAY-104.19.208.184-0666'
-  - '[526ms] 🏁RELAY-162.159.17.189-0655'
-  - '[529ms] 🇰🇷KR-38.60.220.65-0154'
-  - '[530ms] 🇿🇦ZA-102.37.156.224-0118'
-  - '[531ms] 🇸🇬SG-18.140.67.76-6643'
-  - '[532ms] 🇿🇦ZA-102.133.165.160-0119'
-  - '[532ms] 🇰🇷KR-43.203.230.64-6161'
-  - '[534ms] 🏁RELAY-104.16.71.213-0717'
-  - '[538ms] 🇸🇬SG-43.160.197.160-6115'
-  - '[541ms] 🇰🇷KR-218.237.185.230-0173'
-  - '[541ms] 🇰🇷KR-123.140.124.25-4117'
-  - '[543ms] 🇺🇸US-198.62.62.23-0728'
-  - '[545ms] 🏁RELAY-104.20.6.134-2445'
-  - '[547ms] 🇸🇬SG-5.180.78.22-6180'
-  - '[551ms] 🏁RELAY-188.114.96.3-0725'
-  - '[554ms] 🏁RELAY-172.66.47.69-0729'
-  - '[556ms] 🇸🇬SG-54.169.245.181-6117'
-  - '[557ms] 🏁RELAY-45.130.125.32-0714'
-  - '[561ms] 🏇69@NetFlowTools'
-  - '[563ms] 🏁RELAY-162.159.36.5-0622'
-  - '[565ms] 🇬🇧GB-82.38.31.217-0166'
-  - '[567ms] 🇺🇸US-208.103.161.101-0723'
-  - '[571ms] 🇺🇸US-38.54.80.160-2193'
-  - '[574ms] 🏁RELAY-91.193.58.77-0656'
-  - '[580ms] 🇮🇩ID-103.176.78.153-5758'
-  - '[592ms] 印度+V2CROSS.COM'
-  - '[592ms] 🇫🇷FR-51.77.213.197-5483'
-  - '[593ms] 🇺🇸 US 14'
-  - '[606ms] 🇲🇳MN-103.168.56.77-3667'
-  - '[607ms] 🇰🇷KR-43.203.243.134-6171'
-  - '[611ms] 🇲🇩MD-94.131.108.36-6260'
-  - '[611ms] 🏁RELAY-141.193.213.21-0654'
-  - '[618ms] 🏁RELAY-141.193.213.11-0624'
-  - '[621ms] 🇸🇬SG-188.253.12.94-6237'
-  - '[626ms] 🇸🇬SG-188.253.12.93-6238'
-  - '[629ms] 🏁RELAY-45.130.125.96-0668'
-  - '[632ms] 🇸🇬SG-188.253.12.99-6239'
-  - '[634ms] 🇸🇬SG-188.253.12.99-6236'
-  - '[647ms] 🏁RELAY-104.18.152.210-0730'
-  - '[659ms] 🇩🇪DE-92.119.35.71-0139'
-  - '[659ms] 🇰🇷KR-211.178.105.134-0171'
-  - '[700ms] 🇬🇧GB-82.38.31.15-0067'
-  - '[701ms] 🇩🇪DE-94.103.173.70-0097'
-  - '[701ms] 🇬🇧GB-82.38.31.218-0147'
-  - '[717ms] 🇳🇱_NL_荷兰 #2'
-  - '[719ms] 🇮🇳IN-152.67.8.205-0157'
-  - '[745ms] 🇸🇬SG-213.35.127.18-0674'
-  - '[753ms] RO_19dc2_0025'
-  - '[754ms] 🏁RELAY-104.16.174.36-0664'
-  - '[765ms] 🇰🇷KR-123.140.124.24-3906'
-  - '[765ms] RO_19dc2_0024'
-  - '[767ms] 🇺🇸US-38.60.202.163-0151'
-  - '[769ms] 美国+FDC芝加哥机房'
-  - '[772ms] 🇺🇸US-38.54.64.247-0146'
-  - '[773ms] RO_19dc2_0037'
-  - '[776ms] RO_19dc2_0030'
-  - '[776ms] RO_19dc2_0040'
-  - '[782ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #7'
-  - '[782ms] RO_19dc2_0020'
-  - '[783ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #6'
-  - '[786ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #5'
-  - '[787ms] RO_19dc2_0019'
-  - '[790ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #12'
-  - '[791ms] RO_19dc2_0031'
-  - '[791ms] RO_19dc2_0035'
-  - '[792ms] RO_19dc2_0027'
-  - '[793ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #9'
-  - '[794ms] RO_19dc2_0042'
-  - '[795ms] RO_19dc2_0028'
-  - '[798ms] RO_19dc2_0022'
-  - '[798ms] RO_19dc2_0032'
-  - '[801ms] 🇰🇷KR-141.164.45.187-0175'
-  - '[802ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #8'
+  - '[17ms] 🇺🇸US-37.19.198.244-0071'
+  - '[18ms] 🇺🇸US-37.19.198.236-0063'
+  - '[18ms] 🇺🇸US-37.19.198.160-0066'
+  - '[19ms] 🇺🇸US-37.19.198.243-0077'
+  - '[24ms] 🇺🇸US-194.33.45.157-6158'
+  - '[36ms] 🇸🇬SG_2|4.4MB/s'
+  - '[37ms] 🇸🇬SG_3|3.8MB/s'
+  - '[38ms] 美国+CloudFlare节点'
+  - '[39ms] 🇯🇵JP_1|3.5MB/s'
+  - '[40ms] 🇸🇬SG_5|2.0MB/s'
+  - '[40ms] 🇺🇸US_9|1.6MB/s'
+  - '[45ms] 🇸🇬SG_4|3.9MB/s'
+  - '[46ms] 🇸🇬SG_6|3.7MB/s'
+  - '[50ms] 🏁RELAY-104.18.42.163-0623'
+  - '[54ms] 🇳🇱NL_3|2.9MB/s'
+  - '[57ms] 🇺🇸US-23.227.193.173-6198'
+  - '[62ms] 🇨🇦CA-137.184.174.93-0198'
+  - '[66ms] 美国+CloudFlare节点 #6'
+  - '[71ms] 🇩🇪DE_3|2.3MB/s'
+  - '[72ms] 🇺🇸US-156.146.38.168-0083'
+  - '[73ms] 🇺🇸US-156.146.38.167-0068'
+  - '[74ms] 🇺🇸US-156.146.38.170-0080'
+  - '[75ms] 🇺🇸US-156.146.38.169-0081'
+  - '[88ms] 🏁RELAY-104.16.72.70-0653'
+  - '[89ms] 🏁RELAY-188.164.248.122-0708'
+  - '[90ms] 🇳🇱NL_7|2.0MB/s'
+  - '[90ms] 🏁RELAY-104.16.72.101-0619'
+  - '[94ms] 🇨🇦 CA 3'
+  - '[100ms] 🇸🇬SG_7|3.5MB/s'
+  - '[101ms] 🇳🇱NL_5|2.0MB/s'
+  - '[102ms] 🏁RELAY-104.18.42.163-0642'
+  - '[106ms] 🇺🇸US-64.94.95.118-6199'
+  - '[109ms] 🏁RELAY-172.64.147.104-0711'
+  - '[111ms] 🇺🇸US-108.181.0.177-0085'
+  - '[113ms] 🇨🇦CA-108.181.118.10-0084'
+  - '[116ms] 🇺🇸US-173.244.56.6-0089'
+  - '[121ms] 🏁RELAY-141.193.213.30-0709'
+  - '[123ms] NL_speednode_0016'
+  - '[123ms] 🇺🇸US-173.244.56.9-0087'
+  - '[130ms] 美國'
+  - '[132ms] 🇺🇸US-207.180.29.179-0626'
+  - '[133ms] 美國節點'
+  - '[139ms] 美國節點 #3'
+  - '[142ms] AE_speednode_0001'
+  - '[143ms] 美国+CloudFlare节点 #8'
+  - '[145ms] 🇨🇦CA-45.154.204.13-0141'
+  - '[155ms] GB_speednode_0005'
+  - '[156ms] 🇳🇱NL_2|1.6MB/s'
+  - '[162ms] 🇬🇧GB-146.70.61.37-0093'
+  - '[168ms] 🇳🇱NL-109.201.152.181-0127'
+  - '[168ms] 🇬🇧 GB 1'
+  - '[174ms] 🇬🇧GB-94.156.250.148-0124'
+  - '[185ms] 🇨🇦CA-149.22.95.183-0091'
+  - '[185ms] 🇬🇧GB-141.98.101.178-0120'
+  - '[186ms] 🇬🇧GB-141.98.101.181-0109'
+  - '[187ms] 🇬🇧GB-141.98.101.182-0128'
+  - '[188ms] 🇺🇸US-77.247.126.137-6157'
+  - '[189ms] 🇬🇧GB-141.98.101.179-0129'
+  - '[190ms] 🇳🇱NL-193.29.139.235-0070'
+  - '[194ms] 🇬🇧GB-82.38.31.2-0159'
+  - '[195ms] 🇩🇪DE-8.209.74.72-0098'
+  - '[196ms] 🇬🇧GB-82.38.31.218-0147'
+  - '[196ms] 🇬🇧GB-82.38.31.202-0073'
+  - '[197ms] 🇬🇧GB-82.38.31.191-0074'
+  - '[197ms] 🇳🇱NL-193.29.139.204-0065'
+  - '[198ms] 🇬🇧GB-82.38.31.149-0075'
+  - '[199ms] 🇩🇪DE_1|2.1MB/s'
+  - '[201ms] 🇬🇧GB-82.38.31.192-0064'
+  - '[202ms] 🇬🇧GB-82.38.31.219-0150'
+  - '[203ms] 🇳🇱NL-193.29.139.151-0078'
+  - '[205ms] 🇩🇪DE-209.46.102.22-0094'
+  - '[205ms] 🇬🇧GB-82.38.31.214-0165'
+  - '[210ms] 🇳🇱 荷兰 V2CROSS.COM'
+  - '[211ms] 🇮🇹IT-103.241.66.76-0116'
+  - '[215ms] 🇮🇪 IE 2'
+  - '[217ms] 🇬🇧GB-82.38.31.194-0161'
+  - '[218ms] 🇮🇪IE-146.70.90.197-6153'
+  - '[218ms] 🇳🇱 NL 2'
+  - '[225ms] 🇬🇧GB-82.38.31.210-0082'
+  - '[229ms] 🇧🇷BR-38.180.221.143-0115'
+  - '[238ms] 🇬🇧GB-185.44.76.188-5763'
+  - '[252ms] 🇬🇧GB-82.38.31.179-0069'
+  - '[255ms] 🇬🇧GB-132.145.51.172-4124'
+  - '[262ms] 🇺🇸US_6|2.7MB/s'
+  - '[266ms] 🇫🇮FI-193.47.60.186-0100'
+  - '[270ms] 🇳🇱NL-194.124.216.192-6205'
+  - '[276ms] 🏁RELAY-91.193.58.77-0656'
+  - '[276ms] 🇺🇸US-154.64.235.157-0716'
+  - '[276ms] 🇫🇷FR-51.38.99.96-2890'
+  - '[277ms] 🏁RELAY-104.16.71.213-0717'
+  - '[278ms] 🇳🇱NL-51.158.146.183-9165'
+  - '[278ms] 🇩🇪 DE 17'
+  - '[280ms] 🏁RELAY-45.130.125.96-0668'
+  - '[280ms] 🇺🇸US-198.62.62.23-0728'
+  - '[281ms] 🇩🇪DE-185.137.157.250-0134'
+  - '[281ms] 🏁RELAY-45.130.125.160-0726'
+  - '[282ms] 罗马尼亚+V2CROSS.COM #2'
+  - '[282ms] 🇩🇪DE-185.137.157.154-0133'
+  - '[283ms] 🏁RELAY-45.130.125.32-0714'
+  - '[283ms] 🏁RELAY-188.114.96.3-0725'
+  - '[286ms] 🇦🇹AT-212.183.88.136-0715'
+  - '[286ms] 🇩🇪 DE 11'
+  - '[287ms] 🇩🇪 DE 3'
+  - '[288ms] 罗马尼亚+V2CROSS.COM'
+  - '[288ms] 🏁RELAY-141.193.213.21-0654'
+  - '[288ms] 🏁RELAY-185.18.250.245-0677'
+  - '[288ms] 🇩🇪 DE 19'
+  - '[289ms] 🇬🇷 希腊 V2CROSS.COM'
+  - '[289ms] 🏁RELAY-104.17.121.43-0660'
+  - '[289ms] 🇺🇸US-54.184.22.123-6178'
+  - '[290ms] 🏁RELAY-172.64.152.23-0712'
+  - '[291ms] 🇩🇪 DE 13'
+  - '[295ms] 🇩🇪DE-92.119.35.105-0136'
+  - '[302ms] 🇩🇪DE-92.119.35.93-0138'
+  - '[302ms] 🇩🇪 DE 12'
+  - '[303ms] 🏁RELAY-104.19.229.21-0721'
+  - '[304ms] 🇩🇪DE-92.119.35.131-0137'
+  - '[309ms] 🏁RELAY-141.193.213.11-0624'
+  - '[310ms] 美国+CloudFlare节点 #2'
+  - '[312ms] 美国+V2CROSS.COM'
+  - '[314ms] 🇩🇪DE-92.119.35.87-0131'
+  - '[316ms] 美国+CloudFlare节点 #3'
+  - '[321ms] 🇯🇵JP-149.22.87.240-0113'
+  - '[323ms] 🇯🇵JP-149.22.87.204-0111'
+  - '[325ms] 🇯🇵JP-47.79.144.115-0181'
+  - '[327ms] 🇯🇵JP-149.22.87.241-0110'
+  - '[333ms] 美国+CloudFlare节点 #7'
+  - '[337ms] 美国+CloudFlare节点 #4'
+  - '[354ms] 🇳🇴NO-185.213.23.63-0130'
+  - '[358ms] 🇳🇱NL-194.124.216.109-6204'
+  - '[366ms] 🇬🇧GB-82.38.31.189-0079'
+  - '[367ms] 🇫🇷FR-51.77.213.197-5483'
+  - '[376ms] 🇩🇪DE-213.202.208.199-0172'
+  - '[381ms] 🏁RELAY-172.66.47.69-0729'
+  - '[390ms] 🇩🇪DE-94.103.173.70-0097'
+  - '[392ms] 🇦🇺 AU 1'
+  - '[407ms] 🇳🇱NL_6|2.2MB/s'
+  - '[410ms] 🇸🇬 澳大利亚 新南威尔士州悉尼Choopa数据中心'
+  - '[421ms] 🇮🇹IT-57.131.32.191-2122'
+  - '[422ms] 🇲🇩MD-94.131.108.36-6260'
+  - '[427ms] 🏁RELAY-188.114.98.0-0670'
+  - '[428ms] 🏁RELAY-104.20.6.134-2445'
+  - '[430ms] 🏁RELAY-172.64.147.166-0727'
+  - '[431ms] 🇷🇺 RU俄罗斯(mibei77.com 米贝节点分享) #3'
+  - '[433ms] 🏁RELAY-45.130.125.75-0718'
+  - '[434ms] 🇿🇦ZA-102.37.156.224-0118'
+  - '[442ms] 🇿🇦ZA-102.133.165.160-0119'
+  - '[447ms] 🇸🇬 新加坡 Choopa数据中心'
+  - '[448ms] 🇺🇸US-208.103.161.101-0723'
+  - '[459ms] 🏁RELAY-172.66.44.211-0647'
+  - '[465ms] 🇬🇧GB-82.38.31.184-0088'
+  - '[480ms] 🏁RELAY-45.130.125.126-0651'
+  - '[493ms] 🇰🇷KR-218.237.185.230-0174'
+  - '[494ms] 🏁RELAY-8.6.112.0-0659'
+  - '[495ms] 🏇63@NetFlowTools'
+  - '[499ms] 🇧🇬_BG_保加利亚->🇩🇪_DE_德国'
+  - '[501ms] 🇯🇵JP-140.83.51.161-1328'
+  - '[503ms] 🏁RELAY-104.21.40.34-0648'
+  - '[512ms] 🏁RELAY-162.159.17.189-0655'
+  - '[539ms] 🇬🇧GB-82.38.31.217-0166'
+  - '[555ms] 巴西圣保罗+CloudFlare节点'
+  - '[556ms] RO_ccae7_0050'
+  - '[557ms] RO_ccae7_0048'
+  - '[558ms] RO_ccae7_0052'
+  - '[559ms] 🇰🇷KR-123.140.124.25-4246'
+  - '[559ms] RO_ccae7_0033'
+  - '[563ms] RO_ccae7_0051'
+  - '[568ms] 法國節點'
+  - '[569ms] RO_ccae7_0042'
+  - '[571ms] RO_ccae7_0026'
+  - '[572ms] RO_ccae7_0037'
+  - '[576ms] RO_ccae7_0035'
+  - '[581ms] 希腊+V2CROSS.COM'
+  - '[583ms] RO_ccae7_0020'
+  - '[583ms] RO_ccae7_0032'
+  - '[584ms] RO_ccae7_0030'
+  - '[586ms] RO_ccae7_0022'
+  - '[586ms] RO_ccae7_0047'
+  - '[586ms] RO_ccae7_0049'
+  - '[587ms] RO_ccae7_0024'
+  - '[588ms] 🇩🇪DE_2|2.1MB/s'
+  - '[588ms] RO_ccae7_0025'
+  - '[588ms] RO_ccae7_0040'
+  - '[589ms] RO_ccae7_0044'
+  - '[593ms] RO_ccae7_0045'
+  - '[594ms] RO_ccae7_0021'
+  - '[595ms] RO_ccae7_0038'
+  - '[595ms] RO_ccae7_0043'
+  - '[596ms] RO_ccae7_0018'
+  - '[596ms] RO_ccae7_0027'
+  - '[597ms] RO_ccae7_0019'
+  - '[599ms] RO_ccae7_0034'
+  - '[600ms] 希腊+V2CROSS.COM #3'
+  - '[603ms] RO_ccae7_0023'
+  - '[603ms] RO_ccae7_0028'
+  - '[603ms] RO_ccae7_0031'
+  - '[604ms] 🇬🇧GB-82.38.31.15-0067'
+  - '[604ms] 🇰🇷KR-43.203.243.134-6171'
+  - '[604ms] RO_ccae7_0039'
+  - '[608ms] RO_ccae7_0041'
+  - '[609ms] RO_ccae7_0017'
+  - '[609ms] RO_ccae7_0036'
+  - '[614ms] RO_ccae7_0029'
+  - '[627ms] RO_ccae7_0046'
+  - '[640ms] 🇺🇸US-38.54.80.160-2193'
+  - '[643ms] 🇯🇵JP-103.125.216.18-0158'
+  - '[643ms] 🇰🇷KR-13.125.84.24-6154'
+  - '[645ms] 🇯🇵JP-3.113.25.200-6167'
+  - '[648ms] 🇰🇷KR-43.203.230.64-6161'
+  - '[652ms] 美国+华盛顿Cogent通信公司'
+  - '[654ms] 🇯🇵JP-103.125.216.68-0126'
+  - '[659ms] 🇰🇷KR-123.140.124.24-3906'
+  - '[662ms] 🇯🇵JP-108.160.132.132-0644'
+  - '[665ms] 🇰🇷KR-123.140.124.25-4117'
+  - '[668ms] 🇸🇬SG-43.160.197.160-6115'
+  - '[670ms] 🇺🇸 美国 CloudFlare节点 #2'
+  - '[672ms] 🇯🇵JP-64.176.36.61-6200'
+  - '[675ms] 🇬🇧GB-82.38.31.216-0145'
+  - '[675ms] 🇸🇬SG-18.140.67.76-6643'
+  - '[678ms] 🇰🇷KR-3.34.143.133-6176'
+  - '[681ms] 🏇69@NetFlowTools'
+  - '[693ms] 🇺🇸 美国 华盛顿Cogent通信公司'
+  - '[696ms] 🇯🇵JP-64.176.36.17-0713'
+  - '[700ms] 🇸🇬SG-5.180.78.22-6180'
+  - '[704ms] 🏁RELAY-162.159.36.5-0622'
+  - '[715ms] 🇮🇩ID-103.176.78.153-5758'
+  - '[716ms] 🇰🇷KR-141.164.45.187-0204'
+  - '[726ms] 🇰🇷KR-38.60.220.65-0154'
+  - '[749ms] 🇲🇳MN-103.168.56.77-3667'
+  - '[754ms] 🇬🇧GB-82.38.31.7-0164'
+  - '[757ms] 🇸🇬SG-188.253.12.94-6237'
+  - '[757ms] 🇸🇬SG-188.253.12.99-6239'
+  - '[759ms] 🇬🇧GB-82.38.31.10-0167'
+  - '[759ms] 🇸🇬SG-188.253.12.93-6238'
+  - '[765ms] 🇸🇬SG-188.253.12.99-6236'
+  - '[767ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #7'
+  - '[768ms] 🇰🇷KR-3.38.255.122-6170'
+  - '[775ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #6'
+  - '[776ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #11'
+  - '[778ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #9'
+  - '[780ms] 🇰🇷KR-218.237.185.230-0173'
+  - '[782ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #5'
+  - '[791ms] 🇸🇬SG-54.169.245.181-6117'
+  - '[798ms] 🇯🇵JP-52.195.12.80-6155'
   - '[806ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #10'
-  - '[810ms] RO_19dc2_0034'
-  - '[811ms] RO_19dc2_0050'
-  - '[814ms] 美国 CloudFlare节点'
-  - '[814ms] RO_19dc2_0026'
-  - '[815ms] RO_19dc2_0044'
-  - '[816ms] 🇰🇷KR-221.139.79.57-0177'
-  - '[817ms] RO_19dc2_0048'
-  - '[818ms] 🏁RELAY-104.18.152.204-0671'
-  - '[818ms] RO_19dc2_0036'
-  - '[818ms] RO_19dc2_0047'
-  - '[819ms] RO_19dc2_0045'
-  - '[825ms] RO_19dc2_0033'
-  - '[826ms] RO_19dc2_0038'
-  - '[827ms] RO_19dc2_0017'
-  - '[829ms] RO_19dc2_0029'
-  - '[833ms] RO_19dc2_0046'
-  - '[837ms] RO_19dc2_0021'
-  - '[839ms] RO_19dc2_0051'
-  - '[841ms] RO_19dc2_0018'
-  - '[842ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #11'
-  - '[843ms] RO_19dc2_0052'
-  - '[844ms] RO_19dc2_0041'
-  - '[850ms] RO_19dc2_0039'
-  - '[852ms] RO_19dc2_0049'
-  - '[860ms] RO_19dc2_0043'
-  - '[864ms] RO_19dc2_0023'
-  - '[870ms] 🏁RELAY-104.18.152.175-2446'
-  - '[913ms] 🏁RELAY-104.18.152.208-0675'
-  - '[985ms] 美国+CloudFlare节点'
-  - '[993ms] 🇷🇺 RU俄罗斯(mibei77.com 米贝节点分享) #3'
-  - '[1001ms] 法國節點'
-  - '[1110ms] ✅  @vistav2ray  👈👈کانال ما ✅ #1'
-  - '[1124ms] 🏁RELAY-188.114.98.0-0670'
-  - '[1138ms] 🇺🇸US-216.105.168.18-0188'
-  - '[1152ms] @prrofile_purple  ♥️👈 تلگرام #1'
-  - '[1159ms] 🏁RELAY-104.17.131.88-0724'
-  - '[1189ms] 🏁RELAY-104.16.174.44-0722'
-  - '[1274ms] 🏁RELAY-104.18.152.219-0672'
-  - '[1362ms] 🇰🇷KR-141.164.45.187-0204'
-  - '[1401ms] 🇬🇧GB-82.38.31.208-0072'
-  - '[1433ms] 🏁RELAY-104.18.152.187-0676'
-  - '[1454ms] 🇩🇪 DE 12'
-  - '[1471ms] 🇩🇪 DE 19'
-  - '[1541ms] 🏁RELAY-45.130.125.75-0718'
-  - '[1544ms] 🇦🇹AT-212.183.88.136-0715'
-  - '[1758ms] 🏁RELAY-104.18.152.225-0673'
-  - '[1794ms] 🏁RELAY-104.16.174.46-0669'
+  - '[821ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #8'
+  - '[822ms] 🏁RELAY-104.19.208.184-0666'
+  - '[836ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #12'
+  - '[846ms] ✅  @vistav2ray  👈👈کانال ما ✅ #1'
+  - '[875ms] 🇰🇷_KR_韩国'
+  - '[904ms] 🇮🇳 印度 V2CROSS.COM'
+  - '[973ms] 🇸🇬_SG_新加坡'
+  - '[994ms] 🇺🇸_US_美国'
+  - '[1016ms] @prrofile_purple  ♥️👈 تلگرام #1'
+  - '[1020ms] 🇬🇧GB-82.38.31.187-0086'
+  - '[1086ms] 🇬🇧GB-82.38.31.186-0090'
+  - '[1266ms] 🇨🇦CA-158.51.121.63-1221'
+  - '[1358ms] 🇳🇱NL-194.124.216.187-6203'
+  - '[1377ms] 🇰🇷KR-141.164.45.187-0175'
+  - '[1514ms] 🇮🇩ID-130.94.94.15-0170'
+  - '[1552ms] 🇰🇷KR-221.139.79.57-0177'
+  - '[1614ms] 🇬🇧GB-82.38.31.205-0076'
+  - '[1695ms] 🇳🇱NL-108.181.126.122-0104'
+  - '[1724ms] 🏁RELAY-104.18.152.175-2446'
+  - '[1824ms] 🇬🇧GB-82.38.31.155-0092'
+  - '[1921ms] 🇸🇬_SG_新加坡 #2'
 - name: 🔰 延迟最低
   type: url-test
   url: https://www.google.com/
@@ -3385,231 +2878,232 @@ proxy-groups:
 - name: 🇯🇵 日本
   type: select
   proxies:
-  - '[53ms] 🇯🇵JP_3|3.2MB/s'
-  - '[56ms] 🇯🇵JP_2|2.7MB/s'
-  - '[60ms] 🇯🇵JP_6|2.4MB/s'
-  - '[61ms] 🇯🇵JP_4|3.8MB/s'
-  - '[62ms] 🇯🇵JP_7|1.7MB/s'
-  - '[66ms] 🇯🇵JP_5|2.5MB/s'
-  - '[73ms] 🇯🇵JP_9|2.8MB/s'
-  - '[100ms] 🇯🇵JP_8|3.7MB/s'
-  - '[220ms] 🇯🇵JP-149.22.87.240-0113'
-  - '[222ms] 🇯🇵JP-149.22.87.241-0110'
-  - '[228ms] 🇯🇵JP-47.79.144.115-0181'
-  - '[235ms] 🇯🇵JP-149.22.87.204-0111'
-  - '[351ms] 🇯🇵JP-140.83.51.161-1328'
-  - '[426ms] 🇯🇵JP-103.125.216.68-0126'
-  - '[442ms] 🇯🇵JP-52.195.12.80-6155'
-  - '[457ms] 🇯🇵JP-108.160.132.132-0644'
-  - '[459ms] 🇯🇵JP_10|1.6MB/s'
-  - '[461ms] 🇯🇵JP_11|1.6MB/s'
-  - '[463ms] 🇯🇵JP-64.176.36.61-6200'
-  - '[474ms] 🇯🇵JP-3.113.25.200-6167'
-  - '[478ms] 🇯🇵JP_1|2.6MB/s'
-  - '[485ms] 🇯🇵JP-64.176.36.17-0713'
-  - '[524ms] 🇯🇵JP-103.125.216.18-0158'
+  - '[39ms] 🇯🇵JP_1|3.5MB/s'
+  - '[321ms] 🇯🇵JP-149.22.87.240-0113'
+  - '[323ms] 🇯🇵JP-149.22.87.204-0111'
+  - '[325ms] 🇯🇵JP-47.79.144.115-0181'
+  - '[327ms] 🇯🇵JP-149.22.87.241-0110'
+  - '[501ms] 🇯🇵JP-140.83.51.161-1328'
+  - '[643ms] 🇯🇵JP-103.125.216.18-0158'
+  - '[645ms] 🇯🇵JP-3.113.25.200-6167'
+  - '[654ms] 🇯🇵JP-103.125.216.68-0126'
+  - '[662ms] 🇯🇵JP-108.160.132.132-0644'
+  - '[672ms] 🇯🇵JP-64.176.36.61-6200'
+  - '[696ms] 🇯🇵JP-64.176.36.17-0713'
+  - '[798ms] 🇯🇵JP-52.195.12.80-6155'
 - name: 🇺🇸 美国
   type: select
   proxies:
-  - '[18ms] 🇺🇸US-108.181.0.177-0085'
-  - '[31ms] 🇺🇸US-173.244.56.9-0087'
-  - '[32ms] 🇺🇸US-173.244.56.6-0089'
-  - '[35ms] 🇺🇸US-77.247.126.137-6157'
-  - '[53ms] 🇺🇸US-156.146.38.170-0080'
-  - '[53ms] 🇺🇸US-156.146.38.167-0068'
-  - '[56ms] 🇺🇸US_6|2.5MB/s'
-  - '[56ms] 🇺🇸US-156.146.38.169-0081'
-  - '[56ms] 🇺🇸US-156.146.38.168-0083'
-  - '[70ms] 美国+CloudFlare节点 #3'
-  - '[76ms] 🇺🇸US-154.64.235.157-0716'
-  - '[95ms] 🇺🇸US_5|3.2MB/s'
-  - '[104ms] 🇺🇸US-64.94.95.118-6199'
-  - '[109ms] 🇺🇸US-207.180.29.179-0626'
-  - '[133ms] 🇺🇸US-37.19.198.236-0063'
-  - '[134ms] 🇺🇸US-37.19.198.160-0066'
-  - '[137ms] 🇺🇸US-37.19.198.243-0077'
-  - '[139ms] 🇺🇸US-37.19.198.244-0071'
-  - '[140ms] 🇺🇸US-23.227.193.173-6198'
-  - '[163ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #4'
-  - '[169ms] 🇺🇸US-54.184.22.123-6178'
-  - '[182ms] 美国+CloudFlare节点 #4'
-  - '[205ms] 🇺🇸US-194.33.45.157-6158'
-  - '[418ms] 美国+CloudFlare节点 #5'
-  - '[543ms] 🇺🇸US-198.62.62.23-0728'
-  - '[567ms] 🇺🇸US-208.103.161.101-0723'
-  - '[571ms] 🇺🇸US-38.54.80.160-2193'
-  - '[593ms] 🇺🇸 US 14'
-  - '[767ms] 🇺🇸US-38.60.202.163-0151'
-  - '[769ms] 美国+FDC芝加哥机房'
-  - '[772ms] 🇺🇸US-38.54.64.247-0146'
-  - '[782ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #7'
-  - '[783ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #6'
-  - '[786ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #5'
-  - '[790ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #12'
-  - '[793ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #9'
-  - '[802ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #8'
+  - '[17ms] 🇺🇸US-37.19.198.244-0071'
+  - '[18ms] 🇺🇸US-37.19.198.236-0063'
+  - '[18ms] 🇺🇸US-37.19.198.160-0066'
+  - '[19ms] 🇺🇸US-37.19.198.243-0077'
+  - '[24ms] 🇺🇸US-194.33.45.157-6158'
+  - '[38ms] 美国+CloudFlare节点'
+  - '[40ms] 🇺🇸US_9|1.6MB/s'
+  - '[57ms] 🇺🇸US-23.227.193.173-6198'
+  - '[66ms] 美国+CloudFlare节点 #6'
+  - '[72ms] 🇺🇸US-156.146.38.168-0083'
+  - '[73ms] 🇺🇸US-156.146.38.167-0068'
+  - '[74ms] 🇺🇸US-156.146.38.170-0080'
+  - '[75ms] 🇺🇸US-156.146.38.169-0081'
+  - '[106ms] 🇺🇸US-64.94.95.118-6199'
+  - '[111ms] 🇺🇸US-108.181.0.177-0085'
+  - '[116ms] 🇺🇸US-173.244.56.6-0089'
+  - '[123ms] 🇺🇸US-173.244.56.9-0087'
+  - '[132ms] 🇺🇸US-207.180.29.179-0626'
+  - '[143ms] 美国+CloudFlare节点 #8'
+  - '[188ms] 🇺🇸US-77.247.126.137-6157'
+  - '[262ms] 🇺🇸US_6|2.7MB/s'
+  - '[276ms] 🇺🇸US-154.64.235.157-0716'
+  - '[280ms] 🇺🇸US-198.62.62.23-0728'
+  - '[289ms] 🇺🇸US-54.184.22.123-6178'
+  - '[310ms] 美国+CloudFlare节点 #2'
+  - '[312ms] 美国+V2CROSS.COM'
+  - '[316ms] 美国+CloudFlare节点 #3'
+  - '[333ms] 美国+CloudFlare节点 #7'
+  - '[337ms] 美国+CloudFlare节点 #4'
+  - '[448ms] 🇺🇸US-208.103.161.101-0723'
+  - '[640ms] 🇺🇸US-38.54.80.160-2193'
+  - '[652ms] 美国+华盛顿Cogent通信公司'
+  - '[670ms] 🇺🇸 美国 CloudFlare节点 #2'
+  - '[693ms] 🇺🇸 美国 华盛顿Cogent通信公司'
+  - '[767ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #7'
+  - '[775ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #6'
+  - '[776ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #11'
+  - '[778ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #9'
+  - '[782ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #5'
   - '[806ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #10'
-  - '[814ms] 美国 CloudFlare节点'
-  - '[842ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #11'
-  - '[985ms] 美国+CloudFlare节点'
-  - '[1138ms] 🇺🇸US-216.105.168.18-0188'
+  - '[821ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #8'
+  - '[836ms] 🇺🇸 US美国(mibei77.com 米贝节点分享) #12'
+  - '[994ms] 🇺🇸_US_美国'
 - name: 🇸🇬 新加坡
   type: select
   proxies:
-  - '[54ms] 🇸🇬SG_23|3.8MB/s'
-  - '[56ms] 🇸🇬SG_3|3.5MB/s'
-  - '[56ms] 🇸🇬SG_6|3.3MB/s'
-  - '[57ms] 🇸🇬SG_8|3.3MB/s'
-  - '[57ms] 🇸🇬SG_11|2.1MB/s'
-  - '[58ms] 🇸🇬SG_22|2.5MB/s'
-  - '[58ms] 🇸🇬SG_24|4.5MB/s'
-  - '[58ms] 🇸🇬SG_28|2.9MB/s'
-  - '[58ms] 🇸🇬SG_30|3.7MB/s'
-  - '[59ms] 🇸🇬SG_13|2.8MB/s'
-  - '[59ms] 🇸🇬SG_19|3.6MB/s'
-  - '[60ms] 🇸🇬SG_17|3.4MB/s'
-  - '[61ms] 🇸🇬SG_7|5.0MB/s'
-  - '[61ms] 🇸🇬SG_20|3.4MB/s'
-  - '[62ms] 🇸🇬SG_21|3.8MB/s'
-  - '[62ms] 🇸🇬SG_27|2.2MB/s'
-  - '[63ms] 🇸🇬SG_5|2.7MB/s'
-  - '[64ms] 🇸🇬SG_10|1.8MB/s'
-  - '[64ms] 🇸🇬SG_25|2.5MB/s'
-  - '[67ms] 🇸🇬SG_18|1.6MB/s'
-  - '[67ms] 🇸🇬SG_29|3.5MB/s'
-  - '[69ms] 🇸🇬SG_4|3.3MB/s'
-  - '[69ms] 🇸🇬SG_12|3.4MB/s'
-  - '[69ms] 🇸🇬SG_16|3.9MB/s'
-  - '[70ms] 🇸🇬SG_14|2.6MB/s'
-  - '[70ms] 🇸🇬SG_31|2.7MB/s'
-  - '[72ms] 🇸🇬SG_15|3.6MB/s'
-  - '[77ms] 🇸🇬SG_26|3.5MB/s'
-  - '[86ms] 🇸🇬SG_9|3.5MB/s'
-  - '[103ms] 🇸🇬SG_2|3.6MB/s'
-  - '[361ms] 新加坡+Choopa数据中心'
-  - '[394ms] 🇸🇬 SG 2'
-  - '[531ms] 🇸🇬SG-18.140.67.76-6643'
-  - '[538ms] 🇸🇬SG-43.160.197.160-6115'
-  - '[547ms] 🇸🇬SG-5.180.78.22-6180'
-  - '[556ms] 🇸🇬SG-54.169.245.181-6117'
-  - '[621ms] 🇸🇬SG-188.253.12.94-6237'
-  - '[626ms] 🇸🇬SG-188.253.12.93-6238'
-  - '[632ms] 🇸🇬SG-188.253.12.99-6239'
-  - '[634ms] 🇸🇬SG-188.253.12.99-6236'
-  - '[745ms] 🇸🇬SG-213.35.127.18-0674'
+  - '[36ms] 🇸🇬SG_2|4.4MB/s'
+  - '[37ms] 🇸🇬SG_3|3.8MB/s'
+  - '[40ms] 🇸🇬SG_5|2.0MB/s'
+  - '[45ms] 🇸🇬SG_4|3.9MB/s'
+  - '[46ms] 🇸🇬SG_6|3.7MB/s'
+  - '[100ms] 🇸🇬SG_7|3.5MB/s'
+  - '[447ms] 🇸🇬 新加坡 Choopa数据中心'
+  - '[668ms] 🇸🇬SG-43.160.197.160-6115'
+  - '[675ms] 🇸🇬SG-18.140.67.76-6643'
+  - '[700ms] 🇸🇬SG-5.180.78.22-6180'
+  - '[757ms] 🇸🇬SG-188.253.12.94-6237'
+  - '[757ms] 🇸🇬SG-188.253.12.99-6239'
+  - '[759ms] 🇸🇬SG-188.253.12.93-6238'
+  - '[765ms] 🇸🇬SG-188.253.12.99-6236'
+  - '[791ms] 🇸🇬SG-54.169.245.181-6117'
+  - '[973ms] 🇸🇬_SG_新加坡'
+  - '[1921ms] 🇸🇬_SG_新加坡 #2'
 - name: 🇰🇷 韩国
   type: select
   proxies:
-  - '[375ms] 🇰🇷KR-218.237.185.230-0174'
-  - '[418ms] 🇰🇷KR-3.38.255.122-6170'
-  - '[427ms] 🇰🇷KR-123.140.124.25-4246'
-  - '[433ms] 🇰🇷KR-13.125.84.24-6154'
-  - '[438ms] 🇰🇷KR-3.34.143.133-6176'
-  - '[529ms] 🇰🇷KR-38.60.220.65-0154'
-  - '[532ms] 🇰🇷KR-43.203.230.64-6161'
-  - '[541ms] 🇰🇷KR-218.237.185.230-0173'
-  - '[541ms] 🇰🇷KR-123.140.124.25-4117'
-  - '[607ms] 🇰🇷KR-43.203.243.134-6171'
-  - '[659ms] 🇰🇷KR-211.178.105.134-0171'
-  - '[765ms] 🇰🇷KR-123.140.124.24-3906'
-  - '[801ms] 🇰🇷KR-141.164.45.187-0175'
-  - '[816ms] 🇰🇷KR-221.139.79.57-0177'
-  - '[1362ms] 🇰🇷KR-141.164.45.187-0204'
+  - '[493ms] 🇰🇷KR-218.237.185.230-0174'
+  - '[559ms] 🇰🇷KR-123.140.124.25-4246'
+  - '[604ms] 🇰🇷KR-43.203.243.134-6171'
+  - '[643ms] 🇰🇷KR-13.125.84.24-6154'
+  - '[648ms] 🇰🇷KR-43.203.230.64-6161'
+  - '[659ms] 🇰🇷KR-123.140.124.24-3906'
+  - '[665ms] 🇰🇷KR-123.140.124.25-4117'
+  - '[678ms] 🇰🇷KR-3.34.143.133-6176'
+  - '[716ms] 🇰🇷KR-141.164.45.187-0204'
+  - '[726ms] 🇰🇷KR-38.60.220.65-0154'
+  - '[768ms] 🇰🇷KR-3.38.255.122-6170'
+  - '[780ms] 🇰🇷KR-218.237.185.230-0173'
+  - '[875ms] 🇰🇷_KR_韩国'
+  - '[1377ms] 🇰🇷KR-141.164.45.187-0175'
+  - '[1552ms] 🇰🇷KR-221.139.79.57-0177'
 - name: 🇬🇧 英国
   type: select
   proxies:
-  - '[144ms] GB_speednode_0005'
-  - '[268ms] 🇬🇧 GB 1'
-  - '[280ms] 🇬🇧GB-146.70.61.37-0093'
-  - '[293ms] 🇬🇧GB-141.98.101.178-0120'
-  - '[302ms] 🇬🇧GB-141.98.101.181-0109'
-  - '[302ms] 🇬🇧GB-82.38.31.214-0165'
-  - '[303ms] 🇬🇧GB-141.98.101.182-0128'
-  - '[304ms] 🇬🇧GB-82.38.31.192-0064'
-  - '[306ms] 🇬🇧GB-82.38.31.2-0159'
-  - '[307ms] 🇬🇧GB-82.38.31.194-0161'
-  - '[307ms] 🇬🇧GB-141.98.101.179-0129'
-  - '[308ms] 🇬🇧GB-82.38.31.205-0076'
-  - '[308ms] 🇬🇧GB-82.38.31.202-0073'
-  - '[310ms] 🇬🇧GB-82.38.31.210-0082'
-  - '[310ms] 🇬🇧GB-82.38.31.191-0074'
-  - '[313ms] 🇬🇧GB-94.156.250.148-0124'
-  - '[314ms] 🇬🇧GB-82.38.31.149-0075'
-  - '[329ms] 🇬🇧GB-82.38.31.199-0156'
-  - '[335ms] 🇬🇧GB-82.38.31.176-0168'
-  - '[404ms] 🇬🇧GB-132.145.51.172-4124'
-  - '[409ms] 🇬🇧GB-185.44.76.188-5763'
-  - '[440ms] 🇬🇧GB-82.38.31.219-0150'
-  - '[493ms] 🇬🇧GB-82.38.31.216-0145'
-  - '[565ms] 🇬🇧GB-82.38.31.217-0166'
-  - '[700ms] 🇬🇧GB-82.38.31.15-0067'
-  - '[701ms] 🇬🇧GB-82.38.31.218-0147'
-  - '[1401ms] 🇬🇧GB-82.38.31.208-0072'
+  - '[155ms] GB_speednode_0005'
+  - '[162ms] 🇬🇧GB-146.70.61.37-0093'
+  - '[168ms] 🇬🇧 GB 1'
+  - '[174ms] 🇬🇧GB-94.156.250.148-0124'
+  - '[185ms] 🇬🇧GB-141.98.101.178-0120'
+  - '[186ms] 🇬🇧GB-141.98.101.181-0109'
+  - '[187ms] 🇬🇧GB-141.98.101.182-0128'
+  - '[189ms] 🇬🇧GB-141.98.101.179-0129'
+  - '[194ms] 🇬🇧GB-82.38.31.2-0159'
+  - '[196ms] 🇬🇧GB-82.38.31.218-0147'
+  - '[196ms] 🇬🇧GB-82.38.31.202-0073'
+  - '[197ms] 🇬🇧GB-82.38.31.191-0074'
+  - '[198ms] 🇬🇧GB-82.38.31.149-0075'
+  - '[201ms] 🇬🇧GB-82.38.31.192-0064'
+  - '[202ms] 🇬🇧GB-82.38.31.219-0150'
+  - '[205ms] 🇬🇧GB-82.38.31.214-0165'
+  - '[217ms] 🇬🇧GB-82.38.31.194-0161'
+  - '[225ms] 🇬🇧GB-82.38.31.210-0082'
+  - '[238ms] 🇬🇧GB-185.44.76.188-5763'
+  - '[252ms] 🇬🇧GB-82.38.31.179-0069'
+  - '[255ms] 🇬🇧GB-132.145.51.172-4124'
+  - '[366ms] 🇬🇧GB-82.38.31.189-0079'
+  - '[465ms] 🇬🇧GB-82.38.31.184-0088'
+  - '[539ms] 🇬🇧GB-82.38.31.217-0166'
+  - '[604ms] 🇬🇧GB-82.38.31.15-0067'
+  - '[675ms] 🇬🇧GB-82.38.31.216-0145'
+  - '[754ms] 🇬🇧GB-82.38.31.7-0164'
+  - '[759ms] 🇬🇧GB-82.38.31.10-0167'
+  - '[1020ms] 🇬🇧GB-82.38.31.187-0086'
+  - '[1086ms] 🇬🇧GB-82.38.31.186-0090'
+  - '[1614ms] 🇬🇧GB-82.38.31.205-0076'
+  - '[1824ms] 🇬🇧GB-82.38.31.155-0092'
 - name: 🇩🇪 德国
   type: select
   proxies:
-  - '[51ms] 🇩🇪DE_3|2.1MB/s'
-  - '[57ms] 🇩🇪DE_1|3.4MB/s'
-  - '[115ms] AE_speednode_0001'
-  - '[138ms] NL_speednode_0016'
-  - '[144ms] GB_speednode_0005'
-  - '[297ms] 🇩🇪DE-8.209.74.72-0098'
-  - '[298ms] 🇩🇪DE-213.202.208.199-0172'
-  - '[309ms] 🇩🇪DE-209.46.102.22-0094'
-  - '[346ms] 🇩🇪DE-5.230.184.16-0096'
-  - '[409ms] 🇩🇪 DE德国(mibei77.com 米贝节点分享) #2'
-  - '[419ms] 🇩🇪DE-92.119.35.131-0137'
-  - '[422ms] 🇩🇪DE-185.137.157.250-0134'
-  - '[422ms] 🇩🇪DE-92.119.35.123-0106'
-  - '[423ms] 🇩🇪DE-92.119.35.117-0105'
-  - '[424ms] 🇩🇪 DE 11'
-  - '[430ms] 🇩🇪DE-92.119.35.97-0132'
-  - '[432ms] 🇩🇪DE-185.137.157.59-0189'
-  - '[433ms] 🇩🇪 DE 3'
-  - '[441ms] 🇩🇪DE-185.137.157.154-0133'
-  - '[443ms] 🇩🇪 DE 13'
-  - '[444ms] 🇩🇪DE-92.119.35.127-0103'
-  - '[445ms] 🇩🇪DE-92.119.35.87-0131'
-  - '[447ms] 🇩🇪DE-92.119.35.93-0138'
-  - '[449ms] 🇩🇪DE-92.119.35.105-0136'
-  - '[460ms] 🇩🇪DE-92.119.35.120-0102'
-  - '[471ms] 🇩🇪 DE 17'
-  - '[659ms] 🇩🇪DE-92.119.35.71-0139'
-  - '[701ms] 🇩🇪DE-94.103.173.70-0097'
-  - '[1454ms] 🇩🇪 DE 12'
-  - '[1471ms] 🇩🇪 DE 19'
+  - '[71ms] 🇩🇪DE_3|2.3MB/s'
+  - '[123ms] NL_speednode_0016'
+  - '[142ms] AE_speednode_0001'
+  - '[155ms] GB_speednode_0005'
+  - '[195ms] 🇩🇪DE-8.209.74.72-0098'
+  - '[199ms] 🇩🇪DE_1|2.1MB/s'
+  - '[205ms] 🇩🇪DE-209.46.102.22-0094'
+  - '[278ms] 🇩🇪 DE 17'
+  - '[281ms] 🇩🇪DE-185.137.157.250-0134'
+  - '[282ms] 🇩🇪DE-185.137.157.154-0133'
+  - '[286ms] 🇩🇪 DE 11'
+  - '[287ms] 🇩🇪 DE 3'
+  - '[288ms] 🇩🇪 DE 19'
+  - '[291ms] 🇩🇪 DE 13'
+  - '[295ms] 🇩🇪DE-92.119.35.105-0136'
+  - '[302ms] 🇩🇪DE-92.119.35.93-0138'
+  - '[302ms] 🇩🇪 DE 12'
+  - '[304ms] 🇩🇪DE-92.119.35.131-0137'
+  - '[314ms] 🇩🇪DE-92.119.35.87-0131'
+  - '[376ms] 🇩🇪DE-213.202.208.199-0172'
+  - '[390ms] 🇩🇪DE-94.103.173.70-0097'
+  - '[499ms] 🇧🇬_BG_保加利亚->🇩🇪_DE_德国'
+  - '[588ms] 🇩🇪DE_2|2.1MB/s'
 - name: 🇫🇷 法国
   type: select
   proxies:
-  - '[450ms] 🇫🇷FR-51.38.99.96-2890'
-  - '[592ms] 🇫🇷FR-51.77.213.197-5483'
+  - '[276ms] 🇫🇷FR-51.38.99.96-2890'
+  - '[367ms] 🇫🇷FR-51.77.213.197-5483'
 - name: 🇷🇺 俄罗斯
   type: select
   proxies:
-  - '[993ms] 🇷🇺 RU俄罗斯(mibei77.com 米贝节点分享) #3'
+  - '[431ms] 🇷🇺 RU俄罗斯(mibei77.com 米贝节点分享) #3'
 - name: 🇨🇦 加拿大
   type: select
   proxies:
-  - '[22ms] 🇨🇦CA-108.181.118.10-0084'
-  - '[95ms] 🇨🇦CA-149.22.95.183-0091'
-  - '[159ms] 🇨🇦CA-137.184.174.93-0198'
-  - '[167ms] 🇨🇦 CA 3'
-  - '[173ms] 🇨🇦CA-45.154.204.13-0141'
-  - '[312ms] 🇨🇦CA-23.162.200.227-8009'
+  - '[62ms] 🇨🇦CA-137.184.174.93-0198'
+  - '[94ms] 🇨🇦 CA 3'
+  - '[113ms] 🇨🇦CA-108.181.118.10-0084'
+  - '[145ms] 🇨🇦CA-45.154.204.13-0141'
+  - '[185ms] 🇨🇦CA-149.22.95.183-0091'
+  - '[556ms] RO_ccae7_0050'
+  - '[557ms] RO_ccae7_0048'
+  - '[558ms] RO_ccae7_0052'
+  - '[559ms] RO_ccae7_0033'
+  - '[563ms] RO_ccae7_0051'
+  - '[569ms] RO_ccae7_0042'
+  - '[571ms] RO_ccae7_0026'
+  - '[572ms] RO_ccae7_0037'
+  - '[576ms] RO_ccae7_0035'
+  - '[583ms] RO_ccae7_0020'
+  - '[583ms] RO_ccae7_0032'
+  - '[584ms] RO_ccae7_0030'
+  - '[586ms] RO_ccae7_0022'
+  - '[586ms] RO_ccae7_0047'
+  - '[586ms] RO_ccae7_0049'
+  - '[587ms] RO_ccae7_0024'
+  - '[588ms] RO_ccae7_0025'
+  - '[588ms] RO_ccae7_0040'
+  - '[589ms] RO_ccae7_0044'
+  - '[593ms] RO_ccae7_0045'
+  - '[594ms] RO_ccae7_0021'
+  - '[595ms] RO_ccae7_0038'
+  - '[595ms] RO_ccae7_0043'
+  - '[596ms] RO_ccae7_0018'
+  - '[596ms] RO_ccae7_0027'
+  - '[597ms] RO_ccae7_0019'
+  - '[599ms] RO_ccae7_0034'
+  - '[603ms] RO_ccae7_0023'
+  - '[603ms] RO_ccae7_0028'
+  - '[603ms] RO_ccae7_0031'
+  - '[604ms] RO_ccae7_0039'
+  - '[608ms] RO_ccae7_0041'
+  - '[609ms] RO_ccae7_0017'
+  - '[609ms] RO_ccae7_0036'
+  - '[614ms] RO_ccae7_0029'
+  - '[627ms] RO_ccae7_0046'
+  - '[1266ms] 🇨🇦CA-158.51.121.63-1221'
 - name: 🇦🇺 澳大利亚
   type: select
   proxies:
-  - '[284ms] 澳大利亚+新南威尔士州悉尼Choopa数据中心'
-  - '[285ms] 🇦🇺 AU 1'
+  - '[392ms] 🇦🇺 AU 1'
+  - '[410ms] 🇸🇬 澳大利亚 新南威尔士州悉尼Choopa数据中心'
 - name: 🇮🇳 印度
   type: select
   proxies:
-  - '[592ms] 印度+V2CROSS.COM'
-  - '[719ms] 🇮🇳IN-152.67.8.205-0157'
+  - '[904ms] 🇮🇳 印度 V2CROSS.COM'
 - name: 🇧🇷 巴西
   type: select
   proxies:
-  - '[327ms] 🇧🇷BR-38.180.221.143-0115'
+  - '[229ms] 🇧🇷BR-38.180.221.143-0115'
+  - '[555ms] 巴西圣保罗+CloudFlare节点'
 rules:
 - DOMAIN-SUFFIX,ads.google.com,⛔ 广告拦截
 - DOMAIN-SUFFIX,adservice.google.com,⛔ 广告拦截
